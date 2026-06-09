@@ -1,0 +1,200 @@
+[
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\AI_Security_Scanner\\tests\\samples\\vulnerable_sample.py",
+    "language": "python",
+    "total_chunks": 4,
+    "total_findings": 9,
+    "flagged_chunks": [
+      {
+        "name": "get_user",
+        "code": "def get_user(username):\n    # Vulnerability 2: SQL Injection \u2014 user input directly in query (Bandit: B608, Semgrep)\n    conn = sqlite3.connect(\"users.db\")\n    cursor = conn.cursor()\n    query = \"SELECT * FROM users WHERE username = '\" + username + \"'\"\n    cursor.execute(query)\n    return cursor.fetchall()",
+        "start_line": 8,
+        "end_line": 14,
+        "language": "python",
+        "findings": [
+          {
+            "line": 13,
+            "rule": "python.sqlalchemy.security.sqlalchemy-execute-raw-query.sqlalchemy-execute-raw-query",
+            "severity": "ERROR",
+            "message": "Avoiding SQL string concatenation: untrusted input concatenated with raw SQL query can result in SQL Injection. In order to execute raw query safely, prepared statement should be used. SQLAlchemy provides TextualSQL to easily used prepared statement with named parameters. For complex SQL composition, use SQL Expression Language or Schema Definition Language. In most cases, SQLAlchemy ORM will be a better option."
+          },
+          {
+            "line": 12,
+            "rule": "B608",
+            "severity": "MEDIUM",
+            "message": "Possible SQL injection vector through string-based query construction."
+          }
+        ],
+        "finding_count": 2
+      },
+      {
+        "name": "run_command",
+        "code": "def run_command(user_input):\n    # Vulnerability 3: Shell injection \u2014 user input passed to shell (Bandit: B602)\n    subprocess.call(user_input, shell=True)",
+        "start_line": 16,
+        "end_line": 18,
+        "language": "python",
+        "findings": [
+          {
+            "line": 18,
+            "rule": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+            "severity": "ERROR",
+            "message": "Found 'subprocess' function 'call' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which makes it much easier for a malicious actor to execute commands. Use 'shell=False' instead."
+          },
+          {
+            "line": 18,
+            "rule": "B602",
+            "severity": "HIGH",
+            "message": "subprocess call with shell=True identified, security issue."
+          }
+        ],
+        "finding_count": 2
+      },
+      {
+        "name": "calculate",
+        "code": "def calculate(expression):\n    # Vulnerability 4: eval() on user input (Bandit: B307)\n    return eval(expression)",
+        "start_line": 24,
+        "end_line": 26,
+        "language": "python",
+        "findings": [
+          {
+            "line": 26,
+            "rule": "python.lang.security.audit.eval-detected.eval-detected",
+            "severity": "WARNING",
+            "message": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources."
+          },
+          {
+            "line": 26,
+            "rule": "B307",
+            "severity": "MEDIUM",
+            "message": "Use of possibly insecure function - consider using safer ast.literal_eval."
+          }
+        ],
+        "finding_count": 2
+      }
+    ],
+    "flagged_count": 3,
+    "all_findings": [
+      {
+        "line": 13,
+        "rule": "python.sqlalchemy.security.sqlalchemy-execute-raw-query.sqlalchemy-execute-raw-query",
+        "severity": "ERROR",
+        "message": "Avoiding SQL string concatenation: untrusted input concatenated with raw SQL query can result in SQL Injection. In order to execute raw query safely, prepared statement should be used. SQLAlchemy provides TextualSQL to easily used prepared statement with named parameters. For complex SQL composition, use SQL Expression Language or Schema Definition Language. In most cases, SQLAlchemy ORM will be a better option."
+      },
+      {
+        "line": 18,
+        "rule": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+        "severity": "ERROR",
+        "message": "Found 'subprocess' function 'call' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which makes it much easier for a malicious actor to execute commands. Use 'shell=False' instead."
+      },
+      {
+        "line": 26,
+        "rule": "python.lang.security.audit.eval-detected.eval-detected",
+        "severity": "WARNING",
+        "message": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources."
+      },
+      {
+        "line": 2,
+        "rule": "B404",
+        "severity": "LOW",
+        "message": "Consider possible security implications associated with the subprocess module."
+      },
+      {
+        "line": 5,
+        "rule": "B105",
+        "severity": "LOW",
+        "message": "Possible hardcoded password: 'admin123'"
+      },
+      {
+        "line": 6,
+        "rule": "B105",
+        "severity": "LOW",
+        "message": "Possible hardcoded password: 'supersecret'"
+      },
+      {
+        "line": 12,
+        "rule": "B608",
+        "severity": "MEDIUM",
+        "message": "Possible SQL injection vector through string-based query construction."
+      },
+      {
+        "line": 18,
+        "rule": "B602",
+        "severity": "HIGH",
+        "message": "subprocess call with shell=True identified, security issue."
+      },
+      {
+        "line": 26,
+        "rule": "B307",
+        "severity": "MEDIUM",
+        "message": "Use of possibly insecure function - consider using safer ast.literal_eval."
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\AI_Security_Scanner\\tests\\samples\\vulnerable_sample.java",
+    "language": "java",
+    "total_chunks": 4,
+    "total_findings": 3,
+    "flagged_chunks": [
+      {
+        "name": "getUser",
+        "code": "    public static void getUser(String username) throws Exception {\n        Connection conn = DriverManager.getConnection(DB_URL);\n        Statement stmt = conn.createStatement();\n        String query = \"SELECT * FROM users WHERE username = '\" + username + \"'\";\n        ResultSet rs = stmt.executeQuery(query);\n    }",
+        "start_line": 11,
+        "end_line": 16,
+        "language": "java",
+        "findings": [
+          {
+            "line": 15,
+            "rule": "java.lang.security.audit.formatted-sql-string.formatted-sql-string",
+            "severity": "ERROR",
+            "message": "Detected a formatted string in a SQL statement. This could lead to SQL injection if variables in the SQL statement are not properly sanitized. Use a prepared statements (java.sql.PreparedStatement) instead. You can obtain a PreparedStatement using 'connection.prepareStatement'."
+          },
+          {
+            "line": 15,
+            "rule": "java.lang.security.audit.sqli.jdbc-sqli.jdbc-sqli",
+            "severity": "WARNING",
+            "message": "Detected a formatted string in a SQL statement. This could lead to SQL injection if variables in the SQL statement are not properly sanitized. Use a prepared statements (java.sql.PreparedStatement) instead. You can obtain a PreparedStatement using 'connection.prepareStatement'."
+          }
+        ],
+        "finding_count": 2
+      },
+      {
+        "name": "hashPassword",
+        "code": "    public static void hashPassword(String password) throws Exception {\n        java.security.MessageDigest md = java.security.MessageDigest.getInstance(\"MD5\");\n        byte[] hash = md.digest(password.getBytes());\n    }",
+        "start_line": 30,
+        "end_line": 33,
+        "language": "java",
+        "findings": [
+          {
+            "line": 31,
+            "rule": "java.lang.security.audit.crypto.use-of-md5.use-of-md5",
+            "severity": "WARNING",
+            "message": "Detected MD5 hash algorithm which is considered insecure. MD5 is not collision resistant and is therefore not suitable as a cryptographic signature. Use HMAC instead."
+          }
+        ],
+        "finding_count": 1
+      }
+    ],
+    "flagged_count": 2,
+    "all_findings": [
+      {
+        "line": 15,
+        "rule": "java.lang.security.audit.formatted-sql-string.formatted-sql-string",
+        "severity": "ERROR",
+        "message": "Detected a formatted string in a SQL statement. This could lead to SQL injection if variables in the SQL statement are not properly sanitized. Use a prepared statements (java.sql.PreparedStatement) instead. You can obtain a PreparedStatement using 'connection.prepareStatement'."
+      },
+      {
+        "line": 15,
+        "rule": "java.lang.security.audit.sqli.jdbc-sqli.jdbc-sqli",
+        "severity": "WARNING",
+        "message": "Detected a formatted string in a SQL statement. This could lead to SQL injection if variables in the SQL statement are not properly sanitized. Use a prepared statements (java.sql.PreparedStatement) instead. You can obtain a PreparedStatement using 'connection.prepareStatement'."
+      },
+      {
+        "line": 31,
+        "rule": "java.lang.security.audit.crypto.use-of-md5.use-of-md5",
+        "severity": "WARNING",
+        "message": "Detected MD5 hash algorithm which is considered insecure. MD5 is not collision resistant and is therefore not suitable as a cryptographic signature. Use HMAC instead."
+      }
+    ]
+  }
+]
