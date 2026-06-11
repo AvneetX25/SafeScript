@@ -2,11 +2,11 @@
 # CodeBERT fine-tuning for vulnerability detection
 # Designed to run on Kaggle GPU (T4 x2 or P100)
 # Dataset pulled from GitHub repo
-
 import os
 import numpy as np
 import pandas as pd
 from datasets import Dataset
+from torch import nn
 from transformers import (
     AutoTokenizer,
     AutoModelForSequenceClassification,
@@ -102,10 +102,23 @@ training_args = TrainingArguments(
     fp16                        = True,
     logging_steps               = 50,
     report_to                   = "none",
+    learning_rate               = 2e-5,   # standard for CodeBERT fine-tuning
+    warmup_ratio                = 0.1,    # 10% of steps warm up gradually
+    weight_decay                = 0.01,   # mild regularization
 )
-
+class WeightedTrainer(Trainer):
+    def compute_loss(self, model, inputs, return_outputs=False, **kwargs):
+        labels = inputs.pop("labels")
+        outputs = model(**inputs)
+        # upweight vulnerable class (label=1) by 2x
+        weights = torch.tensor([1.0, 2.0], device=model.device)
+        loss_fn = nn.CrossEntropyLoss(weight=weights)
+        loss = loss_fn(outputs.logits, labels)
+        return (loss, outputs) if return_outputs else loss
+    
+    
 # ── Trainer ───────────────────────────────────────────────────────────────────
-trainer = Trainer(
+trainer = WeightedTrainer(
     model           = model,
     args            = training_args,
     train_dataset   = train_ds,
