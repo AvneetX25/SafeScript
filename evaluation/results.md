@@ -1,4 +1,4 @@
-# Week 3 — Model Evaluation Results
+# Model Evaluation Results
 
 ## Dataset
 
@@ -202,6 +202,5 @@ missed vulnerabilities — the correct tradeoff for the security scanner use cas
 | Artifact                  | Path                               |
 |---------------------------|------------------------------------|
 | Fine-tuned model (v2)     | `model/checkpoints/final/`         |
-| Decision threshold        | `model/checkpoints/final/threshold.json` |
 | Raw results (JSON)        | `evaluation/results.json`          |
 | This report               | `evaluation/results.md`            |
