@@ -1,0 +1,65 @@
+# scanner/rules/java-custom.yaml
+
+rules:
+
+  # ── Rule 1: Command Injection via Runtime.exec ─────────────────────────────
+  - id: java-command-injection-runtime-exec
+    patterns:
+      - pattern: |
+          Runtime $R = Runtime.getRuntime();
+          $R.exec($CMD + $INPUT);
+      - pattern: Runtime.getRuntime().exec($CMD + $INPUT);
+      - pattern: |
+          String $CMD = $PREFIX + $INPUT;
+          Runtime.getRuntime().exec($CMD);
+    message: >
+      Command injection: Runtime.exec() is called with a string that includes
+      user-controlled input via concatenation. An attacker can inject arbitrary
+      shell commands.
+    languages: [java]
+    severity: ERROR
+    metadata:
+      category: security
+      cwe: CWE-78
+
+  # ── Rule 2: Hardcoded Credentials in static final fields ──────────────────
+  - id: java-hardcoded-credentials-field
+    patterns:
+      - pattern: |
+          private static final String $NAME = "$VALUE";
+      - metavariable-regex:
+          metavariable: $NAME
+          regex: (?i)(password|passwd|pwd|secret|api_key|apikey|token|credential)
+      - metavariable-regex:
+          metavariable: $VALUE
+          regex: .{4,}   # at least 4 chars — avoids matching empty strings or placeholders
+    message: >
+      Hardcoded credential: '$NAME' is assigned a literal string value in a
+      static final field. Credentials must never be hardcoded — use environment
+      variables or a secrets manager.
+    languages: [java]
+    severity: ERROR
+    metadata:
+      category: security
+      cwe: CWE-798
+
+  # ── Rule 3: Hardcoded credentials in DB connection URLs ───────────────────
+  - id: java-hardcoded-db-url-credentials
+    patterns:
+      - pattern: |
+          private static final String $NAME = "$VALUE";
+      - metavariable-regex:
+          metavariable: $NAME
+          regex: (?i)(url|db_url|database_url|connection_string|jdbc)
+      - metavariable-regex:
+          metavariable: $VALUE
+          regex: (?i).*(password|passwd|pwd)=.+
+    message: >
+      Hardcoded database credentials in connection URL: '$NAME' contains a
+      password embedded in the JDBC URL. Use environment variables or a
+      secrets vault instead.
+    languages: [java]
+    severity: ERROR
+    metadata:
+      category: security
+      cwe: CWE-798

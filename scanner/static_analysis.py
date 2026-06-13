@@ -43,6 +43,51 @@ def extract_python_functions(filepath: str) -> list[dict]:
 
     return chunks
 
+def extract_python_module_level(filepath: str) -> list[dict]:
+    """
+    Extract module-level assignments (outside any function/class) as a single chunk.
+    Catches hardcoded credentials, constants, config variables at the top of a file.
+    """
+    with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
+        source = f.read()
+
+    try:
+        tree = ast.parse(source)
+    except SyntaxError:
+        return []
+
+    lines = source.split('\n')
+
+    # Collect line numbers that belong to any function or class body
+    occupied_lines = set()
+    for node in ast.walk(tree):
+        if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)):
+            for lineno in range(node.lineno, node.end_lineno + 1):
+                occupied_lines.add(lineno)
+
+    # Module-level lines = assignment lines NOT inside any function/class
+    assignment_lines = []
+    for node in ast.walk(tree):
+        if isinstance(node, ast.Assign) and node.lineno not in occupied_lines:
+            assignment_lines.append(node.lineno)
+        elif isinstance(node, ast.AnnAssign) and node.lineno not in occupied_lines:
+            assignment_lines.append(node.lineno)
+
+    if not assignment_lines:
+        return []
+
+    start = min(assignment_lines)
+    end = max(assignment_lines)
+    code = '\n'.join(lines[start - 1:end])
+
+    return [{
+        'name': '<module_level>',
+        'code': code,
+        'start_line': start,
+        'end_line': end,
+        'language': 'python'
+    }]
+
 
 # ─────────────────────────────────────────────
 # SECTION 2: Java Chunking using javalang
@@ -86,6 +131,38 @@ def extract_java_functions(filepath: str) -> list[dict]:
         })
 
     return chunks
+
+def extract_java_class_fields(filepath: str) -> list[dict]:
+    """
+    Extract class-level field declarations from a Java file as a pseudo-chunk.
+    Catches hardcoded credentials in static final fields outside any method.
+    """
+    with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
+        lines = f.readlines()
+
+    field_pattern = re.compile(
+        r'^\s*(private|public|protected)?\s*(static)?\s*(final)?\s*\w[\w<>\[\]]*\s+\w+\s*='
+    )
+
+    field_lines = []
+    for i, line in enumerate(lines, start=1):
+        if field_pattern.match(line):
+            field_lines.append(i)
+
+    if not field_lines:
+        return []
+
+    start = min(field_lines)
+    end = max(field_lines)
+    code = ''.join(lines[start - 1:end])
+
+    return [{
+        'name': '<class_fields>',
+        'code': code,
+        'start_line': start,
+        'end_line': end,
+        'language': 'java'
+    }]
 
 
 def _find_java_method_end(lines: list[str], start_idx: int) -> int:
@@ -255,10 +332,15 @@ def scan_file(filepath: str) -> dict:
     ext = Path(filepath).suffix.lower()
 
     # Step 1: Chunk
+    # Step 1: Chunk
     if ext == '.py':
-        chunks = extract_python_functions(filepath)
+        module_chunks = extract_python_module_level(filepath)
+        func_chunks = extract_python_functions(filepath)
+        chunks = module_chunks + func_chunks          # module-level first
     elif ext == '.java':
-        chunks = extract_java_functions(filepath)
+        field_chunks = extract_java_class_fields(filepath)
+        method_chunks = extract_java_functions(filepath)
+        chunks = field_chunks + method_chunks         # class fields first
     else:
         print(f"[SKIP] Unsupported file type: {filepath}")
         return {}
