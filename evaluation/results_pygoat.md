@@ -57,14 +57,12 @@
 | F1        | ~60% | 84.8% | +24.8 pp |
 
 > Base CodeBERT numbers from: CodeBERT paper evaluation on BigVul benchmark.
-> Our numbers from PyGoat evaluation above (Python only — Java support pending PMD integration).
+> Our numbers from PyGoat evaluation above.
 
 ---
 
 ## Notes
 
-- Java evaluation pending: Semgrep OSS has insufficient Java rules (165 free vs 1859 pro).
-  PMD integration planned to enable WebGoat evaluation.
 - All findings above are from Stage 1 (static) + Stage 2 (CodeBERT) agreement.
   LLM explanation (Stage 3) not run during evaluation to isolate detection accuracy.
 - Scanner trained on Python and Java datasets — Python detection is primary strength.
