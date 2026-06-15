@@ -1,0 +1,2306 @@
+[
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\PyGoatBot.py",
+    "language": "python",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\challenge\\__init__.py",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\challenge\\admin.py",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\challenge\\apps.py",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\challenge\\management\\commands\\populate_challenge.py",
+    "language": "python",
+    "total_chunks": 1,
+    "stage1_flagged": 1,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "handle",
+        "start_line": 9,
+        "end_line": 20,
+        "language": "python",
+        "vuln_probability": 0.5666,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 17,
+            "rule": "B110",
+            "severity": "LOW",
+            "message": "Try, Except, Pass detected."
+          }
+        ],
+        "primary_rule": "B110",
+        "explanation": "",
+        "fix": "",
+        "severity": "LOW",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\challenge\\management\\commands\\populate_challenges.py",
+    "language": "python",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\challenge\\models.py",
+    "language": "python",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\challenge\\tests.py",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\challenge\\urls.py",
+    "language": "python",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\challenge\\utility.py",
+    "language": "python",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\challenge\\views.py",
+    "language": "python",
+    "total_chunks": 4,
+    "stage1_flagged": 2,
+    "stage2_flagged": 4,
+    "both_stages_confirmed": 2,
+    "model_only_confirmed": 0,
+    "total_confirmed": 2,
+    "results": [
+      {
+        "function": "post",
+        "start_line": 27,
+        "end_line": 64,
+        "language": "python",
+        "vuln_probability": 0.5706,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 42,
+            "rule": "B110",
+            "severity": "LOW",
+            "message": "Try, Except, Pass detected."
+          },
+          {
+            "line": 50,
+            "rule": "B603",
+            "severity": "LOW",
+            "message": "subprocess call - check for execution of untrusted input."
+          }
+        ],
+        "primary_rule": "B110",
+        "explanation": "",
+        "fix": "",
+        "severity": "LOW",
+        "severity_reason": ""
+      },
+      {
+        "function": "delete",
+        "start_line": 68,
+        "end_line": 83,
+        "language": "python",
+        "vuln_probability": 0.5934,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 81,
+            "rule": "python.django.security.injection.command.subprocess-injection.subprocess-injection",
+            "severity": "ERROR",
+            "message": "Detected user input entering a `subprocess` call unsafely. This could result in a command injection vulnerability. An attacker could use this vulnerability to execute arbitrary commands on the host, which allows them to download malware, scan sensitive data, or run any command they wish on the server. Do not let users choose the command to run. In general, prefer to use Python API versions of system commands. If you must use subprocess, use a dictionary to allowlist a set of commands."
+          },
+          {
+            "line": 81,
+            "rule": "B603",
+            "severity": "LOW",
+            "message": "subprocess call - check for execution of untrusted input."
+          }
+        ],
+        "primary_rule": "python.django.security.injection.command.subprocess-injection.subprocess-injection",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\dockerized_labs\\broken_auth_lab\\app.py",
+    "language": "python",
+    "total_chunks": 8,
+    "stage1_flagged": 4,
+    "stage2_flagged": 8,
+    "both_stages_confirmed": 4,
+    "model_only_confirmed": 0,
+    "total_confirmed": 4,
+    "results": [
+      {
+        "function": "<module_level>",
+        "start_line": 7,
+        "end_line": 25,
+        "language": "python",
+        "vuln_probability": 0.5193,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 8,
+            "rule": "B105",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'your-secret-key-here'"
+          },
+          {
+            "line": 13,
+            "rule": "B105",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'admin123'"
+          },
+          {
+            "line": 18,
+            "rule": "B105",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'password123'"
+          }
+        ],
+        "primary_rule": "B105",
+        "explanation": "",
+        "fix": "",
+        "severity": "LOW",
+        "severity_reason": ""
+      },
+      {
+        "function": "login",
+        "start_line": 36,
+        "end_line": 56,
+        "language": "python",
+        "vuln_probability": 0.5687,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 49,
+            "rule": "python.flask.security.audit.secure-set-cookie.secure-set-cookie",
+            "severity": "WARNING",
+            "message": "Found a Flask cookie with insecurely configured properties.  By default the secure, httponly and samesite ar configured insecurely. cookies should be handled securely by setting `secure=True`, `httponly=True`, and `samesite='Lax'` in response.set_cookie(...). If these parameters are not properly set, your cookies are not properly protected and are at risk of being stolen by an attacker. Include the `secure=True`, `httponly=True`, `samesite='Lax'` arguments or set these to be true in the Flask configuration."
+          },
+          {
+            "line": 51,
+            "rule": "python.flask.security.audit.secure-set-cookie.secure-set-cookie",
+            "severity": "WARNING",
+            "message": "Found a Flask cookie with insecurely configured properties.  By default the secure, httponly and samesite ar configured insecurely. cookies should be handled securely by setting `secure=True`, `httponly=True`, and `samesite='Lax'` in response.set_cookie(...). If these parameters are not properly set, your cookies are not properly protected and are at risk of being stolen by an attacker. Include the `secure=True`, `httponly=True`, `samesite='Lax'` arguments or set these to be true in the Flask configuration."
+          }
+        ],
+        "primary_rule": "python.flask.security.audit.secure-set-cookie.secure-set-cookie",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      },
+      {
+        "function": "reset_password",
+        "start_line": 79,
+        "end_line": 95,
+        "language": "python",
+        "vuln_probability": 0.6409,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 86,
+            "rule": "B324",
+            "severity": "HIGH",
+            "message": "Use of weak MD5 hash for security. Consider usedforsecurity=False"
+          }
+        ],
+        "primary_rule": "B324",
+        "explanation": "",
+        "fix": "",
+        "severity": "HIGH",
+        "severity_reason": ""
+      },
+      {
+        "function": "dashboard",
+        "start_line": 104,
+        "end_line": 120,
+        "language": "python",
+        "vuln_probability": 0.5908,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 117,
+            "rule": "B110",
+            "severity": "LOW",
+            "message": "Try, Except, Pass detected."
+          }
+        ],
+        "primary_rule": "B110",
+        "explanation": "",
+        "fix": "",
+        "severity": "LOW",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\dockerized_labs\\insec_des_lab\\main.py",
+    "language": "python",
+    "total_chunks": 5,
+    "stage1_flagged": 2,
+    "stage2_flagged": 5,
+    "both_stages_confirmed": 2,
+    "model_only_confirmed": 0,
+    "total_confirmed": 2,
+    "results": [
+      {
+        "function": "serialize_data",
+        "start_line": 22,
+        "end_line": 28,
+        "language": "python",
+        "vuln_probability": 0.5044,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 27,
+            "rule": "python.flask.security.insecure-deserialization.insecure-deserialization",
+            "severity": "ERROR",
+            "message": "Detected the use of an insecure deserialization library in a Flask route. These libraries are prone to code execution vulnerabilities. Ensure user data does not enter this function. To fix this, try to avoid serializing whole objects. Consider instead using a serializer such as JSON."
+          },
+          {
+            "line": 27,
+            "rule": "python.lang.security.deserialization.pickle.avoid-pickle",
+            "severity": "WARNING",
+            "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format."
+          }
+        ],
+        "primary_rule": "python.flask.security.insecure-deserialization.insecure-deserialization",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "deserialize_data",
+        "start_line": 31,
+        "end_line": 48,
+        "language": "python",
+        "vuln_probability": 0.4868,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 36,
+            "rule": "python.flask.security.insecure-deserialization.insecure-deserialization",
+            "severity": "ERROR",
+            "message": "Detected the use of an insecure deserialization library in a Flask route. These libraries are prone to code execution vulnerabilities. Ensure user data does not enter this function. To fix this, try to avoid serializing whole objects. Consider instead using a serializer such as JSON."
+          },
+          {
+            "line": 36,
+            "rule": "python.lang.security.deserialization.pickle.avoid-pickle",
+            "severity": "WARNING",
+            "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format."
+          },
+          {
+            "line": 36,
+            "rule": "B301",
+            "severity": "MEDIUM",
+            "message": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue."
+          }
+        ],
+        "primary_rule": "python.flask.security.insecure-deserialization.insecure-deserialization",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\dockerized_labs\\sensitive_data_exposure\\dataexposure\\__init__.py",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\dockerized_labs\\sensitive_data_exposure\\dataexposure\\forms.py",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\dockerized_labs\\sensitive_data_exposure\\dataexposure\\models.py",
+    "language": "python",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\dockerized_labs\\sensitive_data_exposure\\dataexposure\\urls.py",
+    "language": "python",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\dockerized_labs\\sensitive_data_exposure\\dataexposure\\views.py",
+    "language": "python",
+    "total_chunks": 10,
+    "stage1_flagged": 1,
+    "stage2_flagged": 10,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "generate_api_key",
+        "start_line": 38,
+        "end_line": 42,
+        "language": "python",
+        "vuln_probability": 0.4789,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 42,
+            "rule": "B311",
+            "severity": "LOW",
+            "message": "Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+          }
+        ],
+        "primary_rule": "B311",
+        "explanation": "",
+        "fix": "",
+        "severity": "LOW",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\dockerized_labs\\sensitive_data_exposure\\manage.py",
+    "language": "python",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\dockerized_labs\\sensitive_data_exposure\\sensitive_data_lab\\__init__.py",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\dockerized_labs\\sensitive_data_exposure\\sensitive_data_lab\\settings.py",
+    "language": "python",
+    "total_chunks": 1,
+    "stage1_flagged": 1,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "<module_level>",
+        "start_line": 5,
+        "end_line": 100,
+        "language": "python",
+        "vuln_probability": 0.4413,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 8,
+            "rule": "B105",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'django-insecure-key-for-demonstration-only'"
+          }
+        ],
+        "primary_rule": "B105",
+        "explanation": "",
+        "fix": "",
+        "severity": "LOW",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\dockerized_labs\\sensitive_data_exposure\\sensitive_data_lab\\urls.py",
+    "language": "python",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\dockerized_labs\\sensitive_data_exposure\\sensitive_data_lab\\wsgi.py",
+    "language": "python",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\introduction\\__init__.py",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\introduction\\admin.py",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\introduction\\apis.py",
+    "language": "python",
+    "total_chunks": 5,
+    "stage1_flagged": 2,
+    "stage2_flagged": 5,
+    "both_stages_confirmed": 2,
+    "model_only_confirmed": 0,
+    "total_confirmed": 2,
+    "results": [
+      {
+        "function": "log_function_checker",
+        "start_line": 61,
+        "end_line": 90,
+        "language": "python",
+        "vuln_probability": 0.6028,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 64,
+            "rule": "python.django.security.injection.request-data-write.request-data-write",
+            "severity": "WARNING",
+            "message": "Found user-controlled request data passed into '.write(...)'. This could be dangerous if a malicious actor is able to control data into sensitive files. For example, a malicious actor could force rolling of critical log files, or cause a denial-of-service by using up available disk space. Instead, ensure that request data is properly escaped or sanitized."
+          },
+          {
+            "line": 65,
+            "rule": "python.django.security.injection.request-data-write.request-data-write",
+            "severity": "WARNING",
+            "message": "Found user-controlled request data passed into '.write(...)'. This could be dangerous if a malicious actor is able to control data into sensitive files. For example, a malicious actor could force rolling of critical log files, or cause a denial-of-service by using up available disk space. Instead, ensure that request data is properly escaped or sanitized."
+          }
+        ],
+        "primary_rule": "python.django.security.injection.request-data-write.request-data-write",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      },
+      {
+        "function": "A6_disscussion_api_2",
+        "start_line": 126,
+        "end_line": 138,
+        "language": "python",
+        "vuln_probability": 0.3854,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 130,
+            "rule": "python.django.security.injection.request-data-write.request-data-write",
+            "severity": "WARNING",
+            "message": "Found user-controlled request data passed into '.write(...)'. This could be dangerous if a malicious actor is able to control data into sensitive files. For example, a malicious actor could force rolling of critical log files, or cause a denial-of-service by using up available disk space. Instead, ensure that request data is properly escaped or sanitized."
+          }
+        ],
+        "primary_rule": "python.django.security.injection.request-data-write.request-data-write",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\introduction\\apps.py",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\introduction\\forms.py",
+    "language": "python",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\introduction\\lab_code\\test.py",
+    "language": "python",
+    "total_chunks": 1,
+    "stage1_flagged": 1,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "<module_level>",
+        "start_line": 22,
+        "end_line": 23,
+        "language": "python",
+        "vuln_probability": 0.6336,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 23,
+            "rule": "B506",
+            "severity": "MEDIUM",
+            "message": "Use of unsafe yaml load. Allows instantiation of arbitrary objects. Consider yaml.safe_load()."
+          }
+        ],
+        "primary_rule": "B506",
+        "explanation": "",
+        "fix": "",
+        "severity": "MEDIUM",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\introduction\\mitre.py",
+    "language": "python",
+    "total_chunks": 34,
+    "stage1_flagged": 3,
+    "stage2_flagged": 34,
+    "both_stages_confirmed": 3,
+    "model_only_confirmed": 0,
+    "total_confirmed": 3,
+    "results": [
+      {
+        "function": "csrf_lab_login",
+        "start_line": 155,
+        "end_line": 174,
+        "language": "python",
+        "vuln_probability": 0.5052,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 161,
+            "rule": "python.lang.security.audit.md5-used-as-password.md5-used-as-password",
+            "severity": "WARNING",
+            "message": "It looks like MD5 is used as a password hash. MD5 is not considered a secure password hash because it can be cracked by an attacker in a short amount of time. Use a suitable password hashing function such as scrypt. You can use `hashlib.scrypt`."
+          },
+          {
+            "line": 169,
+            "rule": "python.jwt.security.jwt-hardcode.jwt-python-hardcoded-secret",
+            "severity": "ERROR",
+            "message": "Hardcoded JWT secret or private key is used. This is a Insufficiently Protected Credentials weakness: https://cwe.mitre.org/data/definitions/522.html Consider using an appropriate security mechanism to protect the credentials (e.g. keeping secrets in environment variables)"
+          },
+          {
+            "line": 171,
+            "rule": "python.django.security.audit.secure-cookies.django-secure-set-cookie",
+            "severity": "WARNING",
+            "message": "Django cookies should be handled securely by setting secure=True, httponly=True, and samesite='Lax' in response.set_cookie(...). If your situation calls for different settings, explicitly disable the setting. If you want to send the cookie over http, set secure=False. If you want to let client-side JavaScript read the cookie, set httponly=False. If you want to attach cookies to requests for external sites, set samesite=None."
+          },
+          {
+            "line": 161,
+            "rule": "B324",
+            "severity": "HIGH",
+            "message": "Use of weak MD5 hash for security. Consider usedforsecurity=False"
+          }
+        ],
+        "primary_rule": "python.jwt.security.jwt-hardcode.jwt-python-hardcoded-secret",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "mitre_lab_25_api",
+        "start_line": 215,
+        "end_line": 221,
+        "language": "python",
+        "vuln_probability": 0.5207,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 217,
+            "rule": "python.django.security.injection.code.user-eval.user-eval",
+            "severity": "WARNING",
+            "message": "Found user data in a call to 'eval'. This is extremely dangerous because it can enable an attacker to execute arbitrary remote code on the system. Instead, refactor your code to not use 'eval' and instead use a safe library for the specific functionality you need."
+          },
+          {
+            "line": 218,
+            "rule": "python.lang.security.audit.eval-detected.eval-detected",
+            "severity": "WARNING",
+            "message": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources."
+          },
+          {
+            "line": 218,
+            "rule": "B307",
+            "severity": "MEDIUM",
+            "message": "Use of possibly insecure function - consider using safer ast.literal_eval."
+          }
+        ],
+        "primary_rule": "python.django.security.injection.code.user-eval.user-eval",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      },
+      {
+        "function": "command_out",
+        "start_line": 232,
+        "end_line": 234,
+        "language": "python",
+        "vuln_probability": 0.4028,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 233,
+            "rule": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+            "severity": "ERROR",
+            "message": "Found 'subprocess' function 'Popen' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which makes it much easier for a malicious actor to execute commands. Use 'shell=False' instead."
+          },
+          {
+            "line": 233,
+            "rule": "B602",
+            "severity": "HIGH",
+            "message": "subprocess call with shell=True identified, security issue."
+          }
+        ],
+        "primary_rule": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\introduction\\models.py",
+    "language": "python",
+    "total_chunks": 7,
+    "stage1_flagged": 0,
+    "stage2_flagged": 7,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\introduction\\playground\\A6\\soln.py",
+    "language": "python",
+    "total_chunks": 1,
+    "stage1_flagged": 1,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "check_vuln",
+        "start_line": 4,
+        "end_line": 15,
+        "language": "python",
+        "vuln_probability": 0.5684,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 9,
+            "rule": "B113",
+            "severity": "MEDIUM",
+            "message": "Call to requests without timeout"
+          }
+        ],
+        "primary_rule": "B113",
+        "explanation": "",
+        "fix": "",
+        "severity": "MEDIUM",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\introduction\\playground\\A6\\utility.py",
+    "language": "python",
+    "total_chunks": 1,
+    "stage1_flagged": 1,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "check_vuln",
+        "start_line": 4,
+        "end_line": 15,
+        "language": "python",
+        "vuln_probability": 0.5684,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 9,
+            "rule": "B113",
+            "severity": "MEDIUM",
+            "message": "Call to requests without timeout"
+          }
+        ],
+        "primary_rule": "B113",
+        "explanation": "",
+        "fix": "",
+        "severity": "MEDIUM",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\introduction\\playground\\A9\\api.py",
+    "language": "python",
+    "total_chunks": 1,
+    "stage1_flagged": 1,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "log_function_target",
+        "start_line": 8,
+        "end_line": 33,
+        "language": "python",
+        "vuln_probability": 0.5271,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 17,
+            "rule": "B105",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'admin'"
+          }
+        ],
+        "primary_rule": "B105",
+        "explanation": "",
+        "fix": "",
+        "severity": "LOW",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\introduction\\playground\\A9\\archive.py",
+    "language": "python",
+    "total_chunks": 5,
+    "stage1_flagged": 1,
+    "stage2_flagged": 5,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "log_function_target",
+        "start_line": 8,
+        "end_line": 33,
+        "language": "python",
+        "vuln_probability": 0.5271,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 17,
+            "rule": "B105",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'admin'"
+          }
+        ],
+        "primary_rule": "B105",
+        "explanation": "",
+        "fix": "",
+        "severity": "LOW",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\introduction\\playground\\A9\\main.py",
+    "language": "python",
+    "total_chunks": 4,
+    "stage1_flagged": 0,
+    "stage2_flagged": 4,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\introduction\\playground\\__init__.py",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\introduction\\playground\\ssrf\\__init__.py",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\introduction\\playground\\ssrf\\main.py",
+    "language": "python",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\introduction\\playground\\ssrf\\test.py",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\introduction\\tests.py",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\introduction\\urls.py",
+    "language": "python",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\introduction\\utility.py",
+    "language": "python",
+    "total_chunks": 5,
+    "stage1_flagged": 0,
+    "stage2_flagged": 5,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\introduction\\views.py",
+    "language": "python",
+    "total_chunks": 78,
+    "stage1_flagged": 24,
+    "stage2_flagged": 78,
+    "both_stages_confirmed": 24,
+    "model_only_confirmed": 0,
+    "total_confirmed": 24,
+    "results": [
+      {
+        "function": "<module_level>",
+        "start_line": 202,
+        "end_line": 1163,
+        "language": "python",
+        "vuln_probability": 0.3603,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 202,
+            "rule": "python.lang.security.deserialization.pickle.avoid-pickle",
+            "severity": "WARNING",
+            "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format."
+          },
+          {
+            "line": 211,
+            "rule": "python.django.security.audit.secure-cookies.django-secure-set-cookie",
+            "severity": "WARNING",
+            "message": "Django cookies should be handled securely by setting secure=True, httponly=True, and samesite='Lax' in response.set_cookie(...). If your situation calls for different settings, explicitly disable the setting. If you want to send the cookie over http, set secure=False. If you want to let client-side JavaScript read the cookie, set httponly=False. If you want to attach cookies to requests for external sites, set samesite=None."
+          },
+          {
+            "line": 214,
+            "rule": "python.django.security.audit.avoid-insecure-deserialization.avoid-insecure-deserialization",
+            "severity": "ERROR",
+            "message": "Avoid using insecure deserialization library, backed by `pickle`, `_pickle`, `cpickle`, `dill`, `shelve`, or `yaml`, which are known to lead to remote code execution vulnerabilities."
+          },
+          {
+            "line": 214,
+            "rule": "python.lang.security.deserialization.pickle.avoid-pickle",
+            "severity": "WARNING",
+            "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format."
+          },
+          {
+            "line": 239,
+            "rule": "python.django.security.audit.csrf-exempt.no-csrf-exempt",
+            "severity": "WARNING",
+            "message": "Detected usage of @csrf_exempt, which indicates that there is no CSRF token set for this route. This could lead to an attacker manipulating the user's account and exfiltration of private data. Instead, create a function without this decorator."
+          },
+          {
+            "line": 255,
+            "rule": "python.django.security.audit.csrf-exempt.no-csrf-exempt",
+            "severity": "WARNING",
+            "message": "Detected usage of @csrf_exempt, which indicates that there is no CSRF token set for this route. This could lead to an attacker manipulating the user's account and exfiltration of private data. Instead, create a function without this decorator."
+          },
+          {
+            "line": 290,
+            "rule": "python.django.security.audit.xss.direct-use-of-httpresponse.direct-use-of-httpresponse",
+            "severity": "WARNING",
+            "message": "Detected data rendered directly to the end user via 'HttpResponse' or a similar object. This bypasses Django's built-in cross-site scripting (XSS) defenses and could result in an XSS vulnerability. Use Django's template engine to safely render HTML."
+          },
+          {
+            "line": 291,
+            "rule": "python.django.security.audit.secure-cookies.django-secure-set-cookie",
+            "severity": "WARNING",
+            "message": "Django cookies should be handled securely by setting secure=True, httponly=True, and samesite='Lax' in response.set_cookie(...). If your situation calls for different settings, explicitly disable the setting. If you want to send the cookie over http, set secure=False. If you want to let client-side JavaScript read the cookie, set httponly=False. If you want to attach cookies to requests for external sites, set samesite=None."
+          },
+          {
+            "line": 304,
+            "rule": "python.django.security.audit.xss.direct-use-of-httpresponse.direct-use-of-httpresponse",
+            "severity": "WARNING",
+            "message": "Detected data rendered directly to the end user via 'HttpResponse' or a similar object. This bypasses Django's built-in cross-site scripting (XSS) defenses and could result in an XSS vulnerability. Use Django's template engine to safely render HTML."
+          },
+          {
+            "line": 305,
+            "rule": "python.django.security.audit.secure-cookies.django-secure-set-cookie",
+            "severity": "WARNING",
+            "message": "Django cookies should be handled securely by setting secure=True, httponly=True, and samesite='Lax' in response.set_cookie(...). If your situation calls for different settings, explicitly disable the setting. If you want to send the cookie over http, set secure=False. If you want to let client-side JavaScript read the cookie, set httponly=False. If you want to attach cookies to requests for external sites, set samesite=None."
+          },
+          {
+            "line": 318,
+            "rule": "python.django.security.audit.xss.direct-use-of-httpresponse.direct-use-of-httpresponse",
+            "severity": "WARNING",
+            "message": "Detected data rendered directly to the end user via 'HttpResponse' or a similar object. This bypasses Django's built-in cross-site scripting (XSS) defenses and could result in an XSS vulnerability. Use Django's template engine to safely render HTML."
+          },
+          {
+            "line": 319,
+            "rule": "python.django.security.audit.secure-cookies.django-secure-set-cookie",
+            "severity": "WARNING",
+            "message": "Django cookies should be handled securely by setting secure=True, httponly=True, and samesite='Lax' in response.set_cookie(...). If your situation calls for different settings, explicitly disable the setting. If you want to send the cookie over http, set secure=False. If you want to let client-side JavaScript read the cookie, set httponly=False. If you want to attach cookies to requests for external sites, set samesite=None."
+          },
+          {
+            "line": 329,
+            "rule": "python.django.security.audit.xss.direct-use-of-httpresponse.direct-use-of-httpresponse",
+            "severity": "WARNING",
+            "message": "Detected data rendered directly to the end user via 'HttpResponse' or a similar object. This bypasses Django's built-in cross-site scripting (XSS) defenses and could result in an XSS vulnerability. Use Django's template engine to safely render HTML."
+          },
+          {
+            "line": 335,
+            "rule": "python.django.security.audit.csrf-exempt.no-csrf-exempt",
+            "severity": "WARNING",
+            "message": "Detected usage of @csrf_exempt, which indicates that there is no CSRF token set for this route. This could lead to an attacker manipulating the user's account and exfiltration of private data. Instead, create a function without this decorator."
+          },
+          {
+            "line": 341,
+            "rule": "python.django.security.audit.csrf-exempt.no-csrf-exempt",
+            "severity": "WARNING",
+            "message": "Detected usage of @csrf_exempt, which indicates that there is no CSRF token set for this route. This could lead to an attacker manipulating the user's account and exfiltration of private data. Instead, create a function without this decorator."
+          },
+          {
+            "line": 414,
+            "rule": "python.django.security.audit.csrf-exempt.no-csrf-exempt",
+            "severity": "WARNING",
+            "message": "Detected usage of @csrf_exempt, which indicates that there is no CSRF token set for this route. This could lead to an attacker manipulating the user's account and exfiltration of private data. Instead, create a function without this decorator."
+          },
+          {
+            "line": 430,
+            "rule": "python.django.security.injection.command.subprocess-injection.subprocess-injection",
+            "severity": "ERROR",
+            "message": "Detected user input entering a `subprocess` call unsafely. This could result in a command injection vulnerability. An attacker could use this vulnerability to execute arbitrary commands on the host, which allows them to download malware, scan sensitive data, or run any command they wish on the server. Do not let users choose the command to run. In general, prefer to use Python API versions of system commands. If you must use subprocess, use a dictionary to allowlist a set of commands."
+          },
+          {
+            "line": 431,
+            "rule": "python.lang.security.dangerous-subprocess-use.dangerous-subprocess-use",
+            "severity": "ERROR",
+            "message": "Detected subprocess function 'cmd_lab' with user controlled data. A malicious actor could leverage this to perform command injection. You may consider using 'shlex.escape()'."
+          },
+          {
+            "line": 432,
+            "rule": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+            "severity": "ERROR",
+            "message": "Found 'subprocess' function 'Popen' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which makes it much easier for a malicious actor to execute commands. Use 'shell=False' instead."
+          },
+          {
+            "line": 452,
+            "rule": "python.django.security.audit.csrf-exempt.no-csrf-exempt",
+            "severity": "WARNING",
+            "message": "Detected usage of @csrf_exempt, which indicates that there is no CSRF token set for this route. This could lead to an attacker manipulating the user's account and exfiltration of private data. Instead, create a function without this decorator."
+          },
+          {
+            "line": 456,
+            "rule": "python.django.security.injection.code.user-eval.user-eval",
+            "severity": "WARNING",
+            "message": "Found user data in a call to 'eval'. This is extremely dangerous because it can enable an attacker to execute arbitrary remote code on the system. Instead, refactor your code to not use 'eval' and instead use a safe library for the specific functionality you need."
+          },
+          {
+            "line": 460,
+            "rule": "python.lang.security.audit.eval-detected.eval-detected",
+            "severity": "WARNING",
+            "message": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources."
+          },
+          {
+            "line": 492,
+            "rule": "python.django.security.audit.csrf-exempt.no-csrf-exempt",
+            "severity": "WARNING",
+            "message": "Detected usage of @csrf_exempt, which indicates that there is no CSRF token set for this route. This could lead to an attacker manipulating the user's account and exfiltration of private data. Instead, create a function without this decorator."
+          },
+          {
+            "line": 550,
+            "rule": "python.django.security.audit.csrf-exempt.no-csrf-exempt",
+            "severity": "WARNING",
+            "message": "Detected usage of @csrf_exempt, which indicates that there is no CSRF token set for this route. This could lead to an attacker manipulating the user's account and exfiltration of private data. Instead, create a function without this decorator."
+          },
+          {
+            "line": 560,
+            "rule": "python.django.security.audit.avoid-insecure-deserialization.avoid-insecure-deserialization",
+            "severity": "ERROR",
+            "message": "Avoid using insecure deserialization library, backed by `pickle`, `_pickle`, `cpickle`, `dill`, `shelve`, or `yaml`, which are known to lead to remote code execution vulnerabilities."
+          },
+          {
+            "line": 573,
+            "rule": "python.django.security.audit.csrf-exempt.no-csrf-exempt",
+            "severity": "WARNING",
+            "message": "Detected usage of @csrf_exempt, which indicates that there is no CSRF token set for this route. This could lead to an attacker manipulating the user's account and exfiltration of private data. Instead, create a function without this decorator."
+          },
+          {
+            "line": 738,
+            "rule": "python.django.security.audit.csrf-exempt.no-csrf-exempt",
+            "severity": "WARNING",
+            "message": "Detected usage of @csrf_exempt, which indicates that there is no CSRF token set for this route. This could lead to an attacker manipulating the user's account and exfiltration of private data. Instead, create a function without this decorator."
+          },
+          {
+            "line": 746,
+            "rule": "python.django.security.audit.csrf-exempt.no-csrf-exempt",
+            "severity": "WARNING",
+            "message": "Detected usage of @csrf_exempt, which indicates that there is no CSRF token set for this route. This could lead to an attacker manipulating the user's account and exfiltration of private data. Instead, create a function without this decorator."
+          },
+          {
+            "line": 782,
+            "rule": "python.django.security.audit.csrf-exempt.no-csrf-exempt",
+            "severity": "WARNING",
+            "message": "Detected usage of @csrf_exempt, which indicates that there is no CSRF token set for this route. This could lead to an attacker manipulating the user's account and exfiltration of private data. Instead, create a function without this decorator."
+          },
+          {
+            "line": 846,
+            "rule": "python.django.security.audit.csrf-exempt.no-csrf-exempt",
+            "severity": "WARNING",
+            "message": "Detected usage of @csrf_exempt, which indicates that there is no CSRF token set for this route. This could lead to an attacker manipulating the user's account and exfiltration of private data. Instead, create a function without this decorator."
+          },
+          {
+            "line": 854,
+            "rule": "python.django.security.audit.csrf-exempt.no-csrf-exempt",
+            "severity": "WARNING",
+            "message": "Detected usage of @csrf_exempt, which indicates that there is no CSRF token set for this route. This could lead to an attacker manipulating the user's account and exfiltration of private data. Instead, create a function without this decorator."
+          },
+          {
+            "line": 864,
+            "rule": "python.django.security.injection.tainted-sql-string.tainted-sql-string",
+            "severity": "ERROR",
+            "message": "Detected user input used to manually construct a SQL string. This is usually bad practice because manual construction could accidentally result in a SQL injection. An attacker could use a SQL injection to steal or modify contents of the database. Instead, use a parameterized query which is available by default in most database engines. Alternatively, consider using the Django object-relational mappers (ORM) instead of raw SQL queries."
+          },
+          {
+            "line": 878,
+            "rule": "python.django.security.audit.raw-query.avoid-raw-sql",
+            "severity": "WARNING",
+            "message": "Detected the use of 'RawSQL' or 'raw' indicating the execution of a non-parameterized SQL query. This could lead to a SQL injection and therefore protected information could be leaked. Instead, use Django ORM and parameterized queries before raw SQL. An example of using the Django ORM is: `People.objects.get(name='Bob')`"
+          },
+          {
+            "line": 923,
+            "rule": "python.django.security.injection.path-traversal.path-traversal-join.path-traversal-join",
+            "severity": "WARNING",
+            "message": "Data from request is passed to os.path.join() and to open(). This is a path traversal vulnerability, which can lead to sensitive data being leaked. To mitigate, consider using os.path.abspath or os.path.realpath or Path library."
+          },
+          {
+            "line": 961,
+            "rule": "python.django.security.injection.ssrf.ssrf-injection-requests.ssrf-injection-requests",
+            "severity": "ERROR",
+            "message": "Data from request object is passed to a new server-side request. This could lead to a server-side request forgery (SSRF). To mitigate, ensure that schemes and hosts are validated against an allowlist, do not forward the response to the user, and ensure proper authentication and transport-layer security in the proxied request. See https://owasp.org/www-community/attacks/Server_Side_Request_Forgery to learn more about SSRF vulnerabilities."
+          },
+          {
+            "line": 981,
+            "rule": "python.django.security.injection.request-data-write.request-data-write",
+            "severity": "WARNING",
+            "message": "Found user-controlled request data passed into '.write(...)'. This could be dangerous if a malicious actor is able to control data into sensitive files. For example, a malicious actor could force rolling of critical log files, or cause a denial-of-service by using up available disk space. Instead, ensure that request data is properly escaped or sanitized."
+          },
+          {
+            "line": 990,
+            "rule": "python.django.security.injection.raw-html-format.raw-html-format",
+            "severity": "WARNING",
+            "message": "Detected user input flowing into a manually constructed HTML string. You may be accidentally bypassing secure methods of rendering HTML by manually constructing HTML and this could create a cross-site scripting vulnerability, which could let attackers steal sensitive user data. To be sure this is safe, check that the HTML is rendered safely. Otherwise, use templates (`django.shortcuts.render`) which will safely render HTML instead."
+          },
+          {
+            "line": 1026,
+            "rule": "python.lang.security.audit.md5-used-as-password.md5-used-as-password",
+            "severity": "WARNING",
+            "message": "It looks like MD5 is used as a password hash. MD5 is not considered a secure password hash because it can be cracked by an attacker in a short amount of time. Use a suitable password hashing function such as scrypt. You can use `hashlib.scrypt`."
+          },
+          {
+            "line": 1027,
+            "rule": "python.lang.security.audit.md5-used-as-password.md5-used-as-password",
+            "severity": "WARNING",
+            "message": "It looks like MD5 is used as a password hash. MD5 is not considered a secure password hash because it can be cracked by an attacker in a short amount of time. Use a suitable password hashing function such as scrypt. You can use `hashlib.scrypt`."
+          },
+          {
+            "line": 1076,
+            "rule": "python.django.security.audit.secure-cookies.django-secure-set-cookie",
+            "severity": "WARNING",
+            "message": "Django cookies should be handled securely by setting secure=True, httponly=True, and samesite='Lax' in response.set_cookie(...). If your situation calls for different settings, explicitly disable the setting. If you want to send the cookie over http, set secure=False. If you want to let client-side JavaScript read the cookie, set httponly=False. If you want to attach cookies to requests for external sites, set samesite=None."
+          },
+          {
+            "line": 1081,
+            "rule": "python.django.security.audit.secure-cookies.django-secure-set-cookie",
+            "severity": "WARNING",
+            "message": "Django cookies should be handled securely by setting secure=True, httponly=True, and samesite='Lax' in response.set_cookie(...). If your situation calls for different settings, explicitly disable the setting. If you want to send the cookie over http, set secure=False. If you want to let client-side JavaScript read the cookie, set httponly=False. If you want to attach cookies to requests for external sites, set samesite=None."
+          },
+          {
+            "line": 1109,
+            "rule": "python.django.security.audit.secure-cookies.django-secure-set-cookie",
+            "severity": "WARNING",
+            "message": "Django cookies should be handled securely by setting secure=True, httponly=True, and samesite='Lax' in response.set_cookie(...). If your situation calls for different settings, explicitly disable the setting. If you want to send the cookie over http, set secure=False. If you want to let client-side JavaScript read the cookie, set httponly=False. If you want to attach cookies to requests for external sites, set samesite=None."
+          },
+          {
+            "line": 214,
+            "rule": "B301",
+            "severity": "MEDIUM",
+            "message": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue."
+          },
+          {
+            "line": 258,
+            "rule": "B317",
+            "severity": "MEDIUM",
+            "message": "Using xml.sax.make_parser to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.sax.make_parser with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called"
+          },
+          {
+            "line": 260,
+            "rule": "B319",
+            "severity": "MEDIUM",
+            "message": "Using xml.dom.pulldom.parseString to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.dom.pulldom.parseString with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called"
+          },
+          {
+            "line": 432,
+            "rule": "B602",
+            "severity": "HIGH",
+            "message": "subprocess call with shell=True identified, security issue."
+          },
+          {
+            "line": 460,
+            "rule": "B307",
+            "severity": "MEDIUM",
+            "message": "Use of possibly insecure function - consider using safer ast.literal_eval."
+          },
+          {
+            "line": 496,
+            "rule": "B311",
+            "severity": "LOW",
+            "message": "Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+          },
+          {
+            "line": 538,
+            "rule": "B105",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'S3CR37K3Y'"
+          },
+          {
+            "line": 560,
+            "rule": "B506",
+            "severity": "MEDIUM",
+            "message": "Use of unsafe yaml load. Allows instantiation of arbitrary objects. Consider yaml.safe_load()."
+          },
+          {
+            "line": 680,
+            "rule": "B311",
+            "severity": "LOW",
+            "message": "Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+          },
+          {
+            "line": 766,
+            "rule": "B105",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'jacktheripper'"
+          },
+          {
+            "line": 806,
+            "rule": "B105",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'jacktheripper'"
+          },
+          {
+            "line": 831,
+            "rule": "B105",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'reaper'"
+          },
+          {
+            "line": 833,
+            "rule": "B105",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'admin_pass'"
+          },
+          {
+            "line": 864,
+            "rule": "B608",
+            "severity": "MEDIUM",
+            "message": "Possible SQL injection vector through string-based query construction."
+          },
+          {
+            "line": 866,
+            "rule": "B106",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: '65079b006e85a7e798abecb99e47c154'"
+          },
+          {
+            "line": 868,
+            "rule": "B106",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'jack'"
+          },
+          {
+            "line": 870,
+            "rule": "B106",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'b4f945433ea4c369c12741f62a23ccc0'"
+          },
+          {
+            "line": 872,
+            "rule": "B106",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'f8d1ce191319ea8f4d1d26e65e130dd5'"
+          },
+          {
+            "line": 963,
+            "rule": "B113",
+            "severity": "MEDIUM",
+            "message": "Call to requests without timeout"
+          },
+          {
+            "line": 1026,
+            "rule": "B324",
+            "severity": "HIGH",
+            "message": "Use of weak MD5 hash for security. Consider usedforsecurity=False"
+          },
+          {
+            "line": 1072,
+            "rule": "B105",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'P@$$w0rd'"
+          }
+        ],
+        "primary_rule": "python.django.security.audit.avoid-insecure-deserialization.avoid-insecure-deserialization",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "sql_lab",
+        "start_line": 147,
+        "end_line": 189,
+        "language": "python",
+        "vuln_probability": 0.6346,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 158,
+            "rule": "python.django.security.injection.tainted-sql-string.tainted-sql-string",
+            "severity": "ERROR",
+            "message": "Detected user input used to manually construct a SQL string. This is usually bad practice because manual construction could accidentally result in a SQL injection. An attacker could use a SQL injection to steal or modify contents of the database. Instead, use a parameterized query which is available by default in most database engines. Alternatively, consider using the Django object-relational mappers (ORM) instead of raw SQL queries."
+          },
+          {
+            "line": 162,
+            "rule": "python.django.security.audit.raw-query.avoid-raw-sql",
+            "severity": "WARNING",
+            "message": "Detected the use of 'RawSQL' or 'raw' indicating the execution of a non-parameterized SQL query. This could lead to a SQL injection and therefore protected information could be leaked. Instead, use Django ORM and parameterized queries before raw SQL. An example of using the Django ORM is: `People.objects.get(name='Bob')`"
+          },
+          {
+            "line": 158,
+            "rule": "B608",
+            "severity": "MEDIUM",
+            "message": "Possible SQL injection vector through string-based query construction."
+          }
+        ],
+        "primary_rule": "python.django.security.injection.tainted-sql-string.tainted-sql-string",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "insec_des_lab",
+        "start_line": 205,
+        "end_line": 221,
+        "language": "python",
+        "vuln_probability": 0.5054,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 211,
+            "rule": "python.django.security.audit.secure-cookies.django-secure-set-cookie",
+            "severity": "WARNING",
+            "message": "Django cookies should be handled securely by setting secure=True, httponly=True, and samesite='Lax' in response.set_cookie(...). If your situation calls for different settings, explicitly disable the setting. If you want to send the cookie over http, set secure=False. If you want to let client-side JavaScript read the cookie, set httponly=False. If you want to attach cookies to requests for external sites, set samesite=None."
+          },
+          {
+            "line": 214,
+            "rule": "python.django.security.audit.avoid-insecure-deserialization.avoid-insecure-deserialization",
+            "severity": "ERROR",
+            "message": "Avoid using insecure deserialization library, backed by `pickle`, `_pickle`, `cpickle`, `dill`, `shelve`, or `yaml`, which are known to lead to remote code execution vulnerabilities."
+          },
+          {
+            "line": 214,
+            "rule": "python.lang.security.deserialization.pickle.avoid-pickle",
+            "severity": "WARNING",
+            "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relevant data as JSON or a similar text-based serialization format."
+          },
+          {
+            "line": 214,
+            "rule": "B301",
+            "severity": "MEDIUM",
+            "message": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue."
+          }
+        ],
+        "primary_rule": "python.django.security.audit.avoid-insecure-deserialization.avoid-insecure-deserialization",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "xxe_parse",
+        "start_line": 256,
+        "end_line": 270,
+        "language": "python",
+        "vuln_probability": 0.4047,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 258,
+            "rule": "B317",
+            "severity": "MEDIUM",
+            "message": "Using xml.sax.make_parser to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.sax.make_parser with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called"
+          },
+          {
+            "line": 260,
+            "rule": "B319",
+            "severity": "MEDIUM",
+            "message": "Using xml.dom.pulldom.parseString to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.dom.pulldom.parseString with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called"
+          }
+        ],
+        "primary_rule": "B317",
+        "explanation": "",
+        "fix": "",
+        "severity": "MEDIUM",
+        "severity_reason": ""
+      },
+      {
+        "function": "auth_lab_signup",
+        "start_line": 279,
+        "end_line": 297,
+        "language": "python",
+        "vuln_probability": 0.5364,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 290,
+            "rule": "python.django.security.audit.xss.direct-use-of-httpresponse.direct-use-of-httpresponse",
+            "severity": "WARNING",
+            "message": "Detected data rendered directly to the end user via 'HttpResponse' or a similar object. This bypasses Django's built-in cross-site scripting (XSS) defenses and could result in an XSS vulnerability. Use Django's template engine to safely render HTML."
+          },
+          {
+            "line": 291,
+            "rule": "python.django.security.audit.secure-cookies.django-secure-set-cookie",
+            "severity": "WARNING",
+            "message": "Django cookies should be handled securely by setting secure=True, httponly=True, and samesite='Lax' in response.set_cookie(...). If your situation calls for different settings, explicitly disable the setting. If you want to send the cookie over http, set secure=False. If you want to let client-side JavaScript read the cookie, set httponly=False. If you want to attach cookies to requests for external sites, set samesite=None."
+          }
+        ],
+        "primary_rule": "python.django.security.audit.xss.direct-use-of-httpresponse.direct-use-of-httpresponse",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      },
+      {
+        "function": "auth_lab_login",
+        "start_line": 299,
+        "end_line": 325,
+        "language": "python",
+        "vuln_probability": 0.5763,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 304,
+            "rule": "python.django.security.audit.xss.direct-use-of-httpresponse.direct-use-of-httpresponse",
+            "severity": "WARNING",
+            "message": "Detected data rendered directly to the end user via 'HttpResponse' or a similar object. This bypasses Django's built-in cross-site scripting (XSS) defenses and could result in an XSS vulnerability. Use Django's template engine to safely render HTML."
+          },
+          {
+            "line": 305,
+            "rule": "python.django.security.audit.secure-cookies.django-secure-set-cookie",
+            "severity": "WARNING",
+            "message": "Django cookies should be handled securely by setting secure=True, httponly=True, and samesite='Lax' in response.set_cookie(...). If your situation calls for different settings, explicitly disable the setting. If you want to send the cookie over http, set secure=False. If you want to let client-side JavaScript read the cookie, set httponly=False. If you want to attach cookies to requests for external sites, set samesite=None."
+          },
+          {
+            "line": 318,
+            "rule": "python.django.security.audit.xss.direct-use-of-httpresponse.direct-use-of-httpresponse",
+            "severity": "WARNING",
+            "message": "Detected data rendered directly to the end user via 'HttpResponse' or a similar object. This bypasses Django's built-in cross-site scripting (XSS) defenses and could result in an XSS vulnerability. Use Django's template engine to safely render HTML."
+          },
+          {
+            "line": 319,
+            "rule": "python.django.security.audit.secure-cookies.django-secure-set-cookie",
+            "severity": "WARNING",
+            "message": "Django cookies should be handled securely by setting secure=True, httponly=True, and samesite='Lax' in response.set_cookie(...). If your situation calls for different settings, explicitly disable the setting. If you want to send the cookie over http, set secure=False. If you want to let client-side JavaScript read the cookie, set httponly=False. If you want to attach cookies to requests for external sites, set samesite=None."
+          }
+        ],
+        "primary_rule": "python.django.security.audit.xss.direct-use-of-httpresponse.direct-use-of-httpresponse",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      },
+      {
+        "function": "auth_lab_logout",
+        "start_line": 327,
+        "end_line": 331,
+        "language": "python",
+        "vuln_probability": 0.4124,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 329,
+            "rule": "python.django.security.audit.xss.direct-use-of-httpresponse.direct-use-of-httpresponse",
+            "severity": "WARNING",
+            "message": "Detected data rendered directly to the end user via 'HttpResponse' or a similar object. This bypasses Django's built-in cross-site scripting (XSS) defenses and could result in an XSS vulnerability. Use Django's template engine to safely render HTML."
+          }
+        ],
+        "primary_rule": "python.django.security.audit.xss.direct-use-of-httpresponse.direct-use-of-httpresponse",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      },
+      {
+        "function": "cmd_lab",
+        "start_line": 415,
+        "end_line": 450,
+        "language": "python",
+        "vuln_probability": 0.5316,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 430,
+            "rule": "python.django.security.injection.command.subprocess-injection.subprocess-injection",
+            "severity": "ERROR",
+            "message": "Detected user input entering a `subprocess` call unsafely. This could result in a command injection vulnerability. An attacker could use this vulnerability to execute arbitrary commands on the host, which allows them to download malware, scan sensitive data, or run any command they wish on the server. Do not let users choose the command to run. In general, prefer to use Python API versions of system commands. If you must use subprocess, use a dictionary to allowlist a set of commands."
+          },
+          {
+            "line": 431,
+            "rule": "python.lang.security.dangerous-subprocess-use.dangerous-subprocess-use",
+            "severity": "ERROR",
+            "message": "Detected subprocess function 'cmd_lab' with user controlled data. A malicious actor could leverage this to perform command injection. You may consider using 'shlex.escape()'."
+          },
+          {
+            "line": 432,
+            "rule": "python.lang.security.audit.subprocess-shell-true.subprocess-shell-true",
+            "severity": "ERROR",
+            "message": "Found 'subprocess' function 'Popen' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which makes it much easier for a malicious actor to execute commands. Use 'shell=False' instead."
+          },
+          {
+            "line": 432,
+            "rule": "B602",
+            "severity": "HIGH",
+            "message": "subprocess call with shell=True identified, security issue."
+          }
+        ],
+        "primary_rule": "python.django.security.injection.command.subprocess-injection.subprocess-injection",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "cmd_lab2",
+        "start_line": 453,
+        "end_line": 469,
+        "language": "python",
+        "vuln_probability": 0.549,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 456,
+            "rule": "python.django.security.injection.code.user-eval.user-eval",
+            "severity": "WARNING",
+            "message": "Found user data in a call to 'eval'. This is extremely dangerous because it can enable an attacker to execute arbitrary remote code on the system. Instead, refactor your code to not use 'eval' and instead use a safe library for the specific functionality you need."
+          },
+          {
+            "line": 460,
+            "rule": "python.lang.security.audit.eval-detected.eval-detected",
+            "severity": "WARNING",
+            "message": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evaluated content is not definable by external sources."
+          },
+          {
+            "line": 460,
+            "rule": "B307",
+            "severity": "MEDIUM",
+            "message": "Use of possibly insecure function - consider using safer ast.literal_eval."
+          }
+        ],
+        "primary_rule": "python.django.security.injection.code.user-eval.user-eval",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      },
+      {
+        "function": "Otp",
+        "start_line": 493,
+        "end_line": 518,
+        "language": "python",
+        "vuln_probability": 0.5378,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 496,
+            "rule": "B311",
+            "severity": "LOW",
+            "message": "Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+          }
+        ],
+        "primary_rule": "B311",
+        "explanation": "",
+        "fix": "",
+        "severity": "LOW",
+        "severity_reason": ""
+      },
+      {
+        "function": "secret",
+        "start_line": 535,
+        "end_line": 540,
+        "language": "python",
+        "vuln_probability": 0.3897,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 538,
+            "rule": "B105",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'S3CR37K3Y'"
+          }
+        ],
+        "primary_rule": "B105",
+        "explanation": "",
+        "fix": "",
+        "severity": "LOW",
+        "severity_reason": ""
+      },
+      {
+        "function": "a9_lab",
+        "start_line": 551,
+        "end_line": 569,
+        "language": "python",
+        "vuln_probability": 0.5865,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 560,
+            "rule": "python.django.security.audit.avoid-insecure-deserialization.avoid-insecure-deserialization",
+            "severity": "ERROR",
+            "message": "Avoid using insecure deserialization library, backed by `pickle`, `_pickle`, `cpickle`, `dill`, `shelve`, or `yaml`, which are known to lead to remote code execution vulnerabilities."
+          },
+          {
+            "line": 560,
+            "rule": "B506",
+            "severity": "MEDIUM",
+            "message": "Use of unsafe yaml load. Allows instantiation of arbitrary objects. Consider yaml.safe_load()."
+          }
+        ],
+        "primary_rule": "python.django.security.audit.avoid-insecure-deserialization.avoid-insecure-deserialization",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "gentckt",
+        "start_line": 679,
+        "end_line": 680,
+        "language": "python",
+        "vuln_probability": 0.4654,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 680,
+            "rule": "B311",
+            "severity": "LOW",
+            "message": "Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+          }
+        ],
+        "primary_rule": "B311",
+        "explanation": "",
+        "fix": "",
+        "severity": "LOW",
+        "severity_reason": ""
+      },
+      {
+        "function": "a1_broken_access_lab_1",
+        "start_line": 747,
+        "end_line": 780,
+        "language": "python",
+        "vuln_probability": 0.5279,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 766,
+            "rule": "B105",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'jacktheripper'"
+          }
+        ],
+        "primary_rule": "B105",
+        "explanation": "",
+        "fix": "",
+        "severity": "LOW",
+        "severity_reason": ""
+      },
+      {
+        "function": "a1_broken_access_lab_2",
+        "start_line": 783,
+        "end_line": 820,
+        "language": "python",
+        "vuln_probability": 0.5774,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 806,
+            "rule": "B105",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'jacktheripper'"
+          }
+        ],
+        "primary_rule": "B105",
+        "explanation": "",
+        "fix": "",
+        "severity": "LOW",
+        "severity_reason": ""
+      },
+      {
+        "function": "a1_broken_access_lab_3",
+        "start_line": 822,
+        "end_line": 835,
+        "language": "python",
+        "vuln_probability": 0.6069,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 831,
+            "rule": "B105",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'reaper'"
+          },
+          {
+            "line": 833,
+            "rule": "B105",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'admin_pass'"
+          }
+        ],
+        "primary_rule": "B105",
+        "explanation": "",
+        "fix": "",
+        "severity": "LOW",
+        "severity_reason": ""
+      },
+      {
+        "function": "injection_sql_lab",
+        "start_line": 855,
+        "end_line": 904,
+        "language": "python",
+        "vuln_probability": 0.676,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 864,
+            "rule": "python.django.security.injection.tainted-sql-string.tainted-sql-string",
+            "severity": "ERROR",
+            "message": "Detected user input used to manually construct a SQL string. This is usually bad practice because manual construction could accidentally result in a SQL injection. An attacker could use a SQL injection to steal or modify contents of the database. Instead, use a parameterized query which is available by default in most database engines. Alternatively, consider using the Django object-relational mappers (ORM) instead of raw SQL queries."
+          },
+          {
+            "line": 878,
+            "rule": "python.django.security.audit.raw-query.avoid-raw-sql",
+            "severity": "WARNING",
+            "message": "Detected the use of 'RawSQL' or 'raw' indicating the execution of a non-parameterized SQL query. This could lead to a SQL injection and therefore protected information could be leaked. Instead, use Django ORM and parameterized queries before raw SQL. An example of using the Django ORM is: `People.objects.get(name='Bob')`"
+          },
+          {
+            "line": 864,
+            "rule": "B608",
+            "severity": "MEDIUM",
+            "message": "Possible SQL injection vector through string-based query construction."
+          },
+          {
+            "line": 866,
+            "rule": "B106",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: '65079b006e85a7e798abecb99e47c154'"
+          },
+          {
+            "line": 868,
+            "rule": "B106",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'jack'"
+          },
+          {
+            "line": 870,
+            "rule": "B106",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'b4f945433ea4c369c12741f62a23ccc0'"
+          },
+          {
+            "line": 872,
+            "rule": "B106",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'f8d1ce191319ea8f4d1d26e65e130dd5'"
+          }
+        ],
+        "primary_rule": "python.django.security.injection.tainted-sql-string.tainted-sql-string",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "ssrf_lab",
+        "start_line": 918,
+        "end_line": 933,
+        "language": "python",
+        "vuln_probability": 0.6147,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 923,
+            "rule": "python.django.security.injection.path-traversal.path-traversal-join.path-traversal-join",
+            "severity": "WARNING",
+            "message": "Data from request is passed to os.path.join() and to open(). This is a path traversal vulnerability, which can lead to sensitive data being leaked. To mitigate, consider using os.path.abspath or os.path.realpath or Path library."
+          }
+        ],
+        "primary_rule": "python.django.security.injection.path-traversal.path-traversal-join.path-traversal-join",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      },
+      {
+        "function": "ssrf_lab2",
+        "start_line": 956,
+        "end_line": 966,
+        "language": "python",
+        "vuln_probability": 0.5461,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 961,
+            "rule": "python.django.security.injection.ssrf.ssrf-injection-requests.ssrf-injection-requests",
+            "severity": "ERROR",
+            "message": "Data from request object is passed to a new server-side request. This could lead to a server-side request forgery (SSRF). To mitigate, ensure that schemes and hosts are validated against an allowlist, do not forward the response to the user, and ensure proper authentication and transport-layer security in the proxied request. See https://owasp.org/www-community/attacks/Server_Side_Request_Forgery to learn more about SSRF vulnerabilities."
+          },
+          {
+            "line": 963,
+            "rule": "B113",
+            "severity": "MEDIUM",
+            "message": "Call to requests without timeout"
+          }
+        ],
+        "primary_rule": "python.django.security.injection.ssrf.ssrf-injection-requests.ssrf-injection-requests",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "ssti_lab",
+        "start_line": 975,
+        "end_line": 1000,
+        "language": "python",
+        "vuln_probability": 0.6535,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 981,
+            "rule": "python.django.security.injection.request-data-write.request-data-write",
+            "severity": "WARNING",
+            "message": "Found user-controlled request data passed into '.write(...)'. This could be dangerous if a malicious actor is able to control data into sensitive files. For example, a malicious actor could force rolling of critical log files, or cause a denial-of-service by using up available disk space. Instead, ensure that request data is properly escaped or sanitized."
+          },
+          {
+            "line": 990,
+            "rule": "python.django.security.injection.raw-html-format.raw-html-format",
+            "severity": "WARNING",
+            "message": "Detected user input flowing into a manually constructed HTML string. You may be accidentally bypassing secure methods of rendering HTML by manually constructing HTML and this could create a cross-site scripting vulnerability, which could let attackers steal sensitive user data. To be sure this is safe, check that the HTML is rendered safely. Otherwise, use templates (`django.shortcuts.render`) which will safely render HTML instead."
+          }
+        ],
+        "primary_rule": "python.django.security.injection.request-data-write.request-data-write",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      },
+      {
+        "function": "crypto_failure_lab",
+        "start_line": 1018,
+        "end_line": 1032,
+        "language": "python",
+        "vuln_probability": 0.5801,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 1026,
+            "rule": "python.lang.security.audit.md5-used-as-password.md5-used-as-password",
+            "severity": "WARNING",
+            "message": "It looks like MD5 is used as a password hash. MD5 is not considered a secure password hash because it can be cracked by an attacker in a short amount of time. Use a suitable password hashing function such as scrypt. You can use `hashlib.scrypt`."
+          },
+          {
+            "line": 1027,
+            "rule": "python.lang.security.audit.md5-used-as-password.md5-used-as-password",
+            "severity": "WARNING",
+            "message": "It looks like MD5 is used as a password hash. MD5 is not considered a secure password hash because it can be cracked by an attacker in a short amount of time. Use a suitable password hashing function such as scrypt. You can use `hashlib.scrypt`."
+          },
+          {
+            "line": 1026,
+            "rule": "B324",
+            "severity": "HIGH",
+            "message": "Use of weak MD5 hash for security. Consider usedforsecurity=False"
+          }
+        ],
+        "primary_rule": "B324",
+        "explanation": "",
+        "fix": "",
+        "severity": "HIGH",
+        "severity_reason": ""
+      },
+      {
+        "function": "crypto_failure_lab3",
+        "start_line": 1049,
+        "end_line": 1084,
+        "language": "python",
+        "vuln_probability": 0.6121,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 1076,
+            "rule": "python.django.security.audit.secure-cookies.django-secure-set-cookie",
+            "severity": "WARNING",
+            "message": "Django cookies should be handled securely by setting secure=True, httponly=True, and samesite='Lax' in response.set_cookie(...). If your situation calls for different settings, explicitly disable the setting. If you want to send the cookie over http, set secure=False. If you want to let client-side JavaScript read the cookie, set httponly=False. If you want to attach cookies to requests for external sites, set samesite=None."
+          },
+          {
+            "line": 1081,
+            "rule": "python.django.security.audit.secure-cookies.django-secure-set-cookie",
+            "severity": "WARNING",
+            "message": "Django cookies should be handled securely by setting secure=True, httponly=True, and samesite='Lax' in response.set_cookie(...). If your situation calls for different settings, explicitly disable the setting. If you want to send the cookie over http, set secure=False. If you want to let client-side JavaScript read the cookie, set httponly=False. If you want to attach cookies to requests for external sites, set samesite=None."
+          },
+          {
+            "line": 1072,
+            "rule": "B105",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'P@$$w0rd'"
+          }
+        ],
+        "primary_rule": "python.django.security.audit.secure-cookies.django-secure-set-cookie",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      },
+      {
+        "function": "sec_misconfig_lab3",
+        "start_line": 1090,
+        "end_line": 1110,
+        "language": "python",
+        "vuln_probability": 0.5167,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 1109,
+            "rule": "python.django.security.audit.secure-cookies.django-secure-set-cookie",
+            "severity": "WARNING",
+            "message": "Django cookies should be handled securely by setting secure=True, httponly=True, and samesite='Lax' in response.set_cookie(...). If your situation calls for different settings, explicitly disable the setting. If you want to send the cookie over http, set secure=False. If you want to let client-side JavaScript read the cookie, set httponly=False. If you want to attach cookies to requests for external sites, set samesite=None."
+          }
+        ],
+        "primary_rule": "python.django.security.audit.secure-cookies.django-secure-set-cookie",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      },
+      {
+        "function": "auth_failure_lab3",
+        "start_line": 1179,
+        "end_line": 1205,
+        "language": "python",
+        "vuln_probability": 0.5866,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 1197,
+            "rule": "python.django.security.audit.secure-cookies.django-secure-set-cookie",
+            "severity": "WARNING",
+            "message": "Django cookies should be handled securely by setting secure=True, httponly=True, and samesite='Lax' in response.set_cookie(...). If your situation calls for different settings, explicitly disable the setting. If you want to send the cookie over http, set secure=False. If you want to let client-side JavaScript read the cookie, set httponly=False. If you want to attach cookies to requests for external sites, set samesite=None."
+          },
+          {
+            "line": 1204,
+            "rule": "python.django.security.audit.secure-cookies.django-secure-set-cookie",
+            "severity": "WARNING",
+            "message": "Django cookies should be handled securely by setting secure=True, httponly=True, and samesite='Lax' in response.set_cookie(...). If your situation calls for different settings, explicitly disable the setting. If you want to send the cookie over http, set secure=False. If you want to let client-side JavaScript read the cookie, set httponly=False. If you want to attach cookies to requests for external sites, set samesite=None."
+          },
+          {
+            "line": 1186,
+            "rule": "B110",
+            "severity": "LOW",
+            "message": "Try, Except, Pass detected."
+          }
+        ],
+        "primary_rule": "python.django.security.audit.secure-cookies.django-secure-set-cookie",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\manage.py",
+    "language": "python",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\pygoat\\__init__.py",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\pygoat\\asgi.py",
+    "language": "python",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\pygoat\\settings.py",
+    "language": "python",
+    "total_chunks": 1,
+    "stage1_flagged": 1,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "<module_level>",
+        "start_line": 18,
+        "end_line": 172,
+        "language": "python",
+        "vuln_probability": 0.3112,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 25,
+            "rule": "B105",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'lr66%-a!$km5ed@n5ug!tya5bv!0(yqwa1tn!q%0%3m2nh%oml'"
+          },
+          {
+            "line": 171,
+            "rule": "B105",
+            "severity": "LOW",
+            "message": "Possible hardcoded password: 'PYGOAT'"
+          }
+        ],
+        "primary_rule": "B105",
+        "explanation": "",
+        "fix": "",
+        "severity": "LOW",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\pygoat\\urls.py",
+    "language": "python",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\pygoat\\wsgi.py",
+    "language": "python",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\setup.py",
+    "language": "python",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "C:\\Users\\ASUS\\Desktop\\Machine Learning_AI\\PyGoat\\uninstaller.py",
+    "language": "python",
+    "total_chunks": 5,
+    "stage1_flagged": 2,
+    "stage2_flagged": 5,
+    "both_stages_confirmed": 2,
+    "model_only_confirmed": 0,
+    "total_confirmed": 2,
+    "results": [
+      {
+        "function": "uninstall_pip_packages",
+        "start_line": 33,
+        "end_line": 54,
+        "language": "python",
+        "vuln_probability": 0.5104,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 41,
+            "rule": "B603",
+            "severity": "LOW",
+            "message": "subprocess call - check for execution of untrusted input."
+          },
+          {
+            "line": 47,
+            "rule": "B603",
+            "severity": "LOW",
+            "message": "subprocess call - check for execution of untrusted input."
+          }
+        ],
+        "primary_rule": "B603",
+        "explanation": "",
+        "fix": "",
+        "severity": "LOW",
+        "severity_reason": ""
+      },
+      {
+        "function": "uninstall_pip",
+        "start_line": 58,
+        "end_line": 69,
+        "language": "python",
+        "vuln_probability": 0.3499,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 62,
+            "rule": "B603",
+            "severity": "LOW",
+            "message": "subprocess call - check for execution of untrusted input."
+          }
+        ],
+        "primary_rule": "B603",
+        "explanation": "",
+        "fix": "",
+        "severity": "LOW",
+        "severity_reason": ""
+      }
+    ]
+  }
+]
