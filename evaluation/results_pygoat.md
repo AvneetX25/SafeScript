@@ -4,7 +4,7 @@
 ## Test Target
 - **PyGoat** (Python/Django) — OWASP intentionally vulnerable web application
 - Source: https://github.com/adeyosemanputra/pygoat
-- Scan date: $(Get-Date -Format 'yyyy-MM-dd')
+- Scan date: 16 June 2026
 - Scanner flags: --no-llm (Stage 1 + Stage 2 only)
 
 ---
