@@ -8,6 +8,7 @@ import sys
 import tempfile
 from pathlib import Path
 
+
 from rich.console import Console
 from rich.table import Table
 from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn, TimeElapsedColumn

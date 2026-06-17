@@ -4,10 +4,16 @@
 import os
 from groq import Groq
 from dotenv import load_dotenv
+import streamlit as st
 
 load_dotenv()
+api_key = (
+    st.secrets.get("GROQ_API_KEY")
+    if hasattr(st, "secrets") and "GROQ_API_KEY" in st.secrets
+    else os.getenv("GROQ_API_KEY")
+)
 
-client = Groq(api_key=os.getenv('GROQ_API_KEY'))
+client = Groq(api_key=api_key)
 
 MODEL = 'llama-3.3-70b-versatile'
 
