@@ -216,11 +216,11 @@ def _extract_java_functions_regex(filepath: str, source: str) -> list[dict]:
 # SECTION 3: Run Semgrep
 # ─────────────────────────────────────────────
 
-def run_semgrep(filepath: str) -> list[dict]:
-    """
+"""def run_semgrep(filepath: str) -> list[dict]:
+    
     Run Semgrep with auto config on a file.
     Returns a list of findings with line, rule, severity, message.
-    """
+    
     result = subprocess.run(
         ['semgrep', '--config=auto', '--json', filepath],
         capture_output=True,
@@ -230,6 +230,54 @@ def run_semgrep(filepath: str) -> list[dict]:
    )
 
     # Semgrep exits 0 (no findings) or 1 (findings found) — both are valid
+    if result.returncode not in (0, 1):
+        print(f"[ERROR] Semgrep failed on {filepath}:\n{result.stderr[:300]}")
+        return []
+
+    try:
+        data = json.loads(result.stdout)
+    except json.JSONDecodeError:
+        print(f"[ERROR] Could not parse Semgrep JSON output for {filepath}")
+        return []
+
+    findings = []
+    for r in data.get('results', []):
+        findings.append({
+            'line': r['start']['line'],
+            'rule': r['check_id'],
+            'severity': r['extra']['severity'],
+            'message': r['extra']['message']
+        })
+
+    return findings
+"""
+
+def run_semgrep(filepath: str) -> list[dict]:
+    ext = Path(filepath).suffix.lower()
+
+    # Semgrep 1.x on Windows rejects file paths as scanning roots.
+    # Fix: resolve to absolute, pass parent directory, use --include
+    # to restrict scanning to only this one file.
+    abs_path = Path(filepath).resolve()
+    parent_dir = str(abs_path.parent)
+    filename = abs_path.name
+
+    if ext == '.java':
+        rules_path = str(Path(__file__).parent.parent / 'rules' / 'java_security.yml')
+        cmd = ['semgrep', '--config', rules_path, '--json',
+               '--include', filename, parent_dir]
+    else:
+        cmd = ['semgrep', '--config=auto', '--json',
+               '--include', filename, parent_dir]
+
+    result = subprocess.run(
+        cmd,
+        capture_output=True,
+        text=True,
+        encoding='utf-8',
+        errors='replace'
+    )
+
     if result.returncode not in (0, 1):
         print(f"[ERROR] Semgrep failed on {filepath}:\n{result.stderr[:300]}")
         return []
@@ -364,10 +412,12 @@ def scan_file(filepath: str) -> dict:
         'language': 'python' if ext == '.py' else 'java',
         'total_chunks': len(chunks),
         'total_findings': len(all_findings),
+        'all_chunks': chunks, 
         'flagged_chunks': flagged,
         'flagged_count': len(flagged),
         'all_findings': all_findings
     }
+    
 
     return result
 

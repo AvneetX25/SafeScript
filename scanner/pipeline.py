@@ -183,12 +183,12 @@ def run_pipeline(filepath: str, use_llm: bool = True) -> dict:
     }
 
 
-def _get_all_chunks(filepath: str, static_result: dict) -> list[dict]:
-    """
+"""def _get_all_chunks(filepath: str, static_result: dict) -> list[dict]:
+    
     Reconstruct the full chunk list from the static result.
     static_scan() returns flagged_chunks only — we need all chunks
     for Stage 2 to run on. Re-extract them here.
-    """
+    
     from scanner.static_analysis import (
         extract_python_functions, extract_python_module_level,
         extract_java_functions, extract_java_class_fields
@@ -199,7 +199,18 @@ def _get_all_chunks(filepath: str, static_result: dict) -> list[dict]:
         return extract_python_module_level(filepath) + extract_python_functions(filepath)
     elif ext == '.java':
         return extract_java_class_fields(filepath) + extract_java_functions(filepath)
-    return []
+    return []"""
+    
+    
+# Fixed Code
+def _get_all_chunks(filepath: str, static_result: dict) -> list[dict]:
+    """
+    Return all chunks from the static scan result directly.
+    Previously this re-extracted chunks from disk, causing javalang/regex
+    inconsistencies where start_line values differed between the two extractions,
+    breaking the static_index key lookup in the pipeline filter.
+    """
+    return static_result.get('all_chunks', [])
 
 
 def _pick_primary_finding(findings: list[dict]) -> dict:

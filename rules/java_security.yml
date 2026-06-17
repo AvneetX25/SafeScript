@@ -1,0 +1,215 @@
+# scanner/rules/java-security.yaml
+
+rules:
+
+  # ─── Rule 1: XSS via Servlet Response ────────────────────────────────────────
+  # Catches unescaped user input written directly to HTTP response
+  # Universal pattern: any Java servlet writing request params to response
+  - id: java-xss-servlet-response
+    pattern-either:
+      - pattern: $RESPONSE.getWriter().write($INPUT);
+      - pattern: $RESPONSE.getWriter().println($INPUT);
+      - pattern: $RESPONSE.getWriter().print($INPUT);
+    message: >
+      Potential XSS: data written directly to HTTP response without escaping.
+      Sanitize output using OWASP Java Encoder or similar library before writing
+      to response.
+    languages: [java]
+    severity: ERROR
+    metadata:
+      category: security
+      owasp: "A03:2021 - Injection"
+      cwe: "CWE-79: Improper Neutralization of Input During Web Page Generation"
+
+  # ─── Rule 2: Insecure Deserialization ────────────────────────────────────────
+  # ObjectInputStream.readObject() on untrusted data is always dangerous
+  # Universal pattern: any use of Java native deserialization
+  - id: java-insecure-deserialization
+    pattern-either:
+      - pattern: new ObjectInputStream($INPUT).readObject()
+      - pattern: |
+          ObjectInputStream $OIS = new ObjectInputStream($INPUT);
+          ...
+          $OIS.readObject();
+    message: >
+      Insecure deserialization: ObjectInputStream.readObject() on untrusted data
+      can lead to Remote Code Execution. Use a safe deserialization library or
+      validate the input before deserializing.
+    languages: [java]
+    severity: ERROR
+    metadata:
+      category: security
+      owasp: "A08:2021 - Software and Data Integrity Failures"
+      cwe: "CWE-502: Deserialization of Untrusted Data"
+
+  # ─── Rule 3: Weak Hashing Algorithm ──────────────────────────────────────────
+  # MD5 and SHA1 are cryptographically broken — universal Java pattern
+  - id: java-weak-hash-algorithm
+    pattern-either:
+      - pattern: MessageDigest.getInstance("MD5")
+      - pattern: MessageDigest.getInstance("SHA1")
+      - pattern: MessageDigest.getInstance("SHA-1")
+    message: >
+      Weak hashing algorithm detected. MD5 and SHA-1 are cryptographically broken
+      and should not be used for security purposes. Use SHA-256 or bcrypt/Argon2
+      for password hashing.
+    languages: [java]
+    severity: WARNING
+    metadata:
+      category: security
+      owasp: "A02:2021 - Cryptographic Failures"
+      cwe: "CWE-327: Use of a Broken or Risky Cryptographic Algorithm"
+
+  # ─── Rule 4: Insecure Random for Security Purposes ───────────────────────────
+  # java.util.Random is not cryptographically secure
+  # Dangerous when used for tokens, passwords, session IDs
+  - id: java-insecure-random
+    pattern-either:
+      - pattern: new Random()
+      - pattern: Math.random()
+    message: >
+      java.util.Random and Math.random() are not cryptographically secure.
+      Use java.security.SecureRandom for security-sensitive operations like
+      generating tokens, session IDs, or passwords.
+    languages: [java]
+    severity: WARNING
+    metadata:
+      category: security
+      owasp: "A02:2021 - Cryptographic Failures"
+      cwe: "CWE-330: Use of Insufficiently Random Values"
+
+  # ─── Rule 5: Open Redirect ───────────────────────────────────────────────────
+  # Redirecting to user-controlled URLs — universal servlet pattern
+  - id: java-open-redirect
+    pattern-either:
+      - pattern: $RESPONSE.sendRedirect($INPUT);
+      - pattern: |
+          String $URL = $REQUEST.getParameter(...);
+          ...
+          $RESPONSE.sendRedirect($URL);
+    message: >
+      Potential open redirect: redirecting to a user-controlled URL.
+      Validate and whitelist redirect targets before calling sendRedirect().
+    languages: [java]
+    severity: WARNING
+    metadata:
+      category: security
+      owasp: "A01:2021 - Broken Access Control"
+      cwe: "CWE-601: URL Redirection to Untrusted Site"
+
+  # ─── Rule 6: Insecure Cookie (Missing HttpOnly / Secure flags) ───────────────
+  # Cookies without HttpOnly are accessible to JavaScript (XSS escalation)
+  - id: java-insecure-cookie
+    pattern-either:
+      - pattern: |
+          Cookie $C = new Cookie(...);
+          ...
+          $RESPONSE.addCookie($C);
+      - pattern: |
+          Cookie $C = new Cookie(...);
+          $C.setHttpOnly(false);
+    message: >
+      Insecure cookie: ensure HttpOnly and Secure flags are set on all sensitive
+      cookies. Missing HttpOnly allows JavaScript access; missing Secure allows
+      transmission over HTTP.
+    languages: [java]
+    severity: WARNING
+    metadata:
+      category: security
+      owasp: "A05:2021 - Security Misconfiguration"
+      cwe: "CWE-614: Sensitive Cookie in HTTPS Session Without Secure Attribute"
+
+  # ─── Rule 7: SSRF (Server Side Request Forgery) ──────────────────────────────
+  # Making HTTP requests to user-controlled URLs
+  - id: java-ssrf
+    pattern-either:
+      - pattern: |
+          String $URL = $REQUEST.getParameter(...);
+          ...
+          new URL($URL).openConnection();
+      - pattern: |
+          String $URL = $REQUEST.getParameter(...);
+          ...
+          new URL($URL).openStream();
+      - pattern: |
+          String $URL = $REQUEST.getParameter(...);
+          ...
+          HttpURLConnection $CONN = (HttpURLConnection) new URL($URL).openConnection();
+    message: >
+      Potential SSRF: making HTTP requests to a user-controlled URL.
+      Validate and whitelist allowed hosts before making outbound requests.
+    languages: [java]
+    severity: ERROR
+    metadata:
+      category: security
+      owasp: "A10:2021 - Server-Side Request Forgery"
+      cwe: "CWE-918: Server-Side Request Forgery"
+
+  # ─── Rule 8: Insecure TLS / Disabled Certificate Validation ─────────────────
+  # Trust-all TrustManager bypasses SSL certificate verification entirely
+  - id: java-trust-all-certificates
+    pattern-either:
+      - pattern: |
+          TrustManager[] $TM = new TrustManager[] {
+            new X509TrustManager() {
+              public void checkClientTrusted(...) {}
+              public void checkServerTrusted(...) {}
+              ...
+            }
+          };
+      - pattern: SSLContext.getInstance("SSL")
+      - pattern: SSLContext.getInstance("SSLv3")
+      - pattern: SSLContext.getInstance("TLSv1")
+      - pattern: SSLContext.getInstance("TLSv1.1")
+    message: >
+      Insecure TLS configuration: disabled certificate validation or use of
+      deprecated TLS versions (SSLv3, TLSv1.0, TLSv1.1). Use TLSv1.2 or
+      TLSv1.3 and never override certificate validation.
+    languages: [java]
+    severity: ERROR
+    metadata:
+      category: security
+      owasp: "A02:2021 - Cryptographic Failures"
+      cwe: "CWE-295: Improper Certificate Validation"
+
+  # ─── Rule 9: JWT None Algorithm ──────────────────────────────────────────────
+  # Accepting unsigned JWT tokens is a critical auth bypass
+  - id: java-jwt-none-algorithm
+    pattern-either:
+      - pattern: Jwts.parser().setSigningKey(null)
+      - pattern: Algorithm.none()
+      - pattern: |
+          $BUILDER.signWith(SignatureAlgorithm.NONE, ...);
+    message: >
+      JWT none algorithm: accepting unsigned tokens allows authentication bypass.
+      Always verify JWT signatures with a strong algorithm (RS256, HS256).
+    languages: [java]
+    severity: ERROR
+    metadata:
+      category: security
+      owasp: "A02:2021 - Cryptographic Failures"
+      cwe: "CWE-347: Improper Verification of Cryptographic Signature"
+
+  # ─── Rule 10: Hardcoded Passwords / Secrets in Code ─────────────────────────
+  # Credentials assigned directly as string literals — universal pattern
+  - id: java-hardcoded-credentials
+    pattern-either:
+      - pattern: String $PASSWORD = "$LITERAL";
+      - pattern: String $SECRET = "$LITERAL";
+      - pattern: String $TOKEN = "$LITERAL";
+      - pattern: String $API_KEY = "$LITERAL";
+    pattern-not-either:
+      - pattern: String $PASSWORD = "";
+      - pattern: String $SECRET = "";
+      - pattern: String $TOKEN = "";
+      - pattern: String $API_KEY = "";
+    message: >
+      Hardcoded credential detected. Never store passwords, secrets, tokens, or
+      API keys as string literals in source code. Use environment variables or
+      a secrets manager instead.
+    languages: [java]
+    severity: ERROR
+    metadata:
+      category: security
+      owasp: "A07:2021 - Identification and Authentication Failures"
+      cwe: "CWE-798: Use of Hard-coded Credentials"

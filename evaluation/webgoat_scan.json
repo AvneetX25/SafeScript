@@ -1,0 +1,3843 @@
+[
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\authbypass\\AccountVerificationHelper.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\authbypass\\AuthBypass.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\authbypass\\VerifyAccount.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\bypassrestrictions\\BypassRestrictions.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\bypassrestrictions\\BypassRestrictionsFieldRestrictions.java",
+    "language": "java",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\bypassrestrictions\\BypassRestrictionsFrontendValidation.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 2,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 2,
+    "model_only_confirmed": 0,
+    "total_confirmed": 2,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 31,
+        "end_line": 37,
+        "language": "java",
+        "vuln_probability": 0.7098,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 31,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 32,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 33,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 34,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 35,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 36,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 37,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "completed",
+        "start_line": 22,
+        "end_line": 63,
+        "language": "java",
+        "vuln_probability": 0.5901,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 31,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 32,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 33,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 34,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 35,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 36,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 37,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\challenges\\ChallengeIntro.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\challenges\\Email.java",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\challenges\\Flag.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\challenges\\FlagController.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\challenges\\Flags.java",
+    "language": "java",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\challenges\\SolutionConstants.java",
+    "language": "java",
+    "total_chunks": 1,
+    "stage1_flagged": 1,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 10,
+        "end_line": 10,
+        "language": "java",
+        "vuln_probability": 0.6616,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 10,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\challenges\\challenge1\\Assignment1.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\challenges\\challenge1\\Challenge1.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\challenges\\challenge1\\ImageServlet.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 1,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 21,
+        "end_line": 34,
+        "language": "java",
+        "vuln_probability": 0.5336,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 21,
+            "rule": "rules.java-insecure-random",
+            "severity": "WARNING",
+            "message": "java.util.Random and Math.random() are not cryptographically secure. Use java.security.SecureRandom for security-sensitive operations like generating tokens, session IDs, or passwords.\n"
+          }
+        ],
+        "primary_rule": "rules.java-insecure-random",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\challenges\\challenge5\\Assignment5.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\challenges\\challenge5\\Challenge5.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\challenges\\challenge7\\Assignment7.java",
+    "language": "java",
+    "total_chunks": 4,
+    "stage1_flagged": 1,
+    "stage2_flagged": 4,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 36,
+        "end_line": 82,
+        "language": "java",
+        "vuln_probability": 0.5374,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 36,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 38,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\challenges\\challenge7\\Challenge7.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\challenges\\challenge7\\MD5.java",
+    "language": "java",
+    "total_chunks": 34,
+    "stage1_flagged": 0,
+    "stage2_flagged": 34,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\challenges\\challenge7\\PasswordResetLink.java",
+    "language": "java",
+    "total_chunks": 4,
+    "stage1_flagged": 2,
+    "stage2_flagged": 4,
+    "both_stages_confirmed": 2,
+    "model_only_confirmed": 0,
+    "total_confirmed": 2,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 15,
+        "end_line": 40,
+        "language": "java",
+        "vuln_probability": 0.433,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 15,
+            "rule": "rules.java-insecure-random",
+            "severity": "WARNING",
+            "message": "java.util.Random and Math.random() are not cryptographically secure. Use java.security.SecureRandom for security-sensitive operations like generating tokens, session IDs, or passwords.\n"
+          }
+        ],
+        "primary_rule": "rules.java-insecure-random",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      },
+      {
+        "function": "createPasswordReset",
+        "start_line": 14,
+        "end_line": 21,
+        "language": "java",
+        "vuln_probability": 0.5295,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 15,
+            "rule": "rules.java-insecure-random",
+            "severity": "WARNING",
+            "message": "java.util.Random and Math.random() are not cryptographically secure. Use java.security.SecureRandom for security-sensitive operations like generating tokens, session IDs, or passwords.\n"
+          }
+        ],
+        "primary_rule": "rules.java-insecure-random",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\challenges\\challenge8\\Assignment8.java",
+    "language": "java",
+    "total_chunks": 5,
+    "stage1_flagged": 2,
+    "stage2_flagged": 5,
+    "both_stages_confirmed": 2,
+    "model_only_confirmed": 0,
+    "total_confirmed": 2,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 45,
+        "end_line": 72,
+        "language": "java",
+        "vuln_probability": 0.437,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 45,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "vote",
+        "start_line": 42,
+        "end_line": 56,
+        "language": "java",
+        "vuln_probability": 0.3702,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 45,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\challenges\\challenge8\\Challenge8.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\chromedevtools\\ChromeDevTools.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\chromedevtools\\NetworkDummy.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\chromedevtools\\NetworkLesson.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\cia\\CIA.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\cia\\CIAQuiz.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\clientsidefiltering\\ClientSideFiltering.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\clientsidefiltering\\ClientSideFilteringAssignment.java",
+    "language": "java",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\clientsidefiltering\\ClientSideFilteringFreeAssignment.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 1,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 25,
+        "end_line": 25,
+        "language": "java",
+        "vuln_probability": 0.5842,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 25,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\clientsidefiltering\\Salaries.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\clientsidefiltering\\ShopEndpoint.java",
+    "language": "java",
+    "total_chunks": 4,
+    "stage1_flagged": 0,
+    "stage2_flagged": 4,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\cryptography\\CryptoUtil.java",
+    "language": "java",
+    "total_chunks": 7,
+    "stage1_flagged": 2,
+    "stage2_flagged": 7,
+    "both_stages_confirmed": 2,
+    "model_only_confirmed": 0,
+    "total_confirmed": 2,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 29,
+        "end_line": 144,
+        "language": "java",
+        "vuln_probability": 0.3552,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 49,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "getPrivateKeyInPEM",
+        "start_line": 48,
+        "end_line": 58,
+        "language": "java",
+        "vuln_probability": 0.5901,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 49,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\cryptography\\Cryptography.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\cryptography\\EncodingAssignment.java",
+    "language": "java",
+    "total_chunks": 4,
+    "stage1_flagged": 2,
+    "stage2_flagged": 4,
+    "both_stages_confirmed": 2,
+    "model_only_confirmed": 0,
+    "total_confirmed": 2,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 33,
+        "end_line": 50,
+        "language": "java",
+        "vuln_probability": 0.4971,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 37,
+            "rule": "rules.java-insecure-random",
+            "severity": "WARNING",
+            "message": "java.util.Random and Math.random() are not cryptographically secure. Use java.security.SecureRandom for security-sensitive operations like generating tokens, session IDs, or passwords.\n"
+          }
+        ],
+        "primary_rule": "rules.java-insecure-random",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      },
+      {
+        "function": "getBasicAuth",
+        "start_line": 31,
+        "end_line": 42,
+        "language": "java",
+        "vuln_probability": 0.5034,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 37,
+            "rule": "rules.java-insecure-random",
+            "severity": "WARNING",
+            "message": "java.util.Random and Math.random() are not cryptographically secure. Use java.security.SecureRandom for security-sensitive operations like generating tokens, session IDs, or passwords.\n"
+          }
+        ],
+        "primary_rule": "rules.java-insecure-random",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\cryptography\\HashingAssignment.java",
+    "language": "java",
+    "total_chunks": 5,
+    "stage1_flagged": 3,
+    "stage2_flagged": 5,
+    "both_stages_confirmed": 3,
+    "model_only_confirmed": 0,
+    "total_confirmed": 3,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 28,
+        "end_line": 86,
+        "language": "java",
+        "vuln_probability": 0.3169,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 37,
+            "rule": "rules.java-insecure-random",
+            "severity": "WARNING",
+            "message": "java.util.Random and Math.random() are not cryptographically secure. Use java.security.SecureRandom for security-sensitive operations like generating tokens, session IDs, or passwords.\n"
+          },
+          {
+            "line": 39,
+            "rule": "rules.java-weak-hash-algorithm",
+            "severity": "WARNING",
+            "message": "Weak hashing algorithm detected. MD5 and SHA-1 are cryptographically broken and should not be used for security purposes. Use SHA-256 or bcrypt/Argon2 for password hashing.\n"
+          },
+          {
+            "line": 55,
+            "rule": "rules.java-insecure-random",
+            "severity": "WARNING",
+            "message": "java.util.Random and Math.random() are not cryptographically secure. Use java.security.SecureRandom for security-sensitive operations like generating tokens, session IDs, or passwords.\n"
+          }
+        ],
+        "primary_rule": "rules.java-insecure-random",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      },
+      {
+        "function": "getMd5",
+        "start_line": 32,
+        "end_line": 47,
+        "language": "java",
+        "vuln_probability": 0.3529,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 37,
+            "rule": "rules.java-insecure-random",
+            "severity": "WARNING",
+            "message": "java.util.Random and Math.random() are not cryptographically secure. Use java.security.SecureRandom for security-sensitive operations like generating tokens, session IDs, or passwords.\n"
+          },
+          {
+            "line": 39,
+            "rule": "rules.java-weak-hash-algorithm",
+            "severity": "WARNING",
+            "message": "Weak hashing algorithm detected. MD5 and SHA-1 are cryptographically broken and should not be used for security purposes. Use SHA-256 or bcrypt/Argon2 for password hashing.\n"
+          }
+        ],
+        "primary_rule": "rules.java-insecure-random",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      },
+      {
+        "function": "getSha256",
+        "start_line": 51,
+        "end_line": 61,
+        "language": "java",
+        "vuln_probability": 0.3701,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 55,
+            "rule": "rules.java-insecure-random",
+            "severity": "WARNING",
+            "message": "java.util.Random and Math.random() are not cryptographically secure. Use java.security.SecureRandom for security-sensitive operations like generating tokens, session IDs, or passwords.\n"
+          }
+        ],
+        "primary_rule": "rules.java-insecure-random",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\cryptography\\SecureDefaultsAssignment.java",
+    "language": "java",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\cryptography\\SigningAssignment.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\cryptography\\XOREncodingAssignment.java",
+    "language": "java",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\csrf\\CSRF.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\csrf\\CSRFConfirmFlag1.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\csrf\\CSRFFeedback.java",
+    "language": "java",
+    "total_chunks": 5,
+    "stage1_flagged": 0,
+    "stage2_flagged": 5,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\csrf\\CSRFGetFlag.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 2,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 2,
+    "model_only_confirmed": 0,
+    "total_confirmed": 2,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 33,
+        "end_line": 56,
+        "language": "java",
+        "vuln_probability": 0.439,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 39,
+            "rule": "rules.java-insecure-random",
+            "severity": "WARNING",
+            "message": "java.util.Random and Math.random() are not cryptographically secure. Use java.security.SecureRandom for security-sensitive operations like generating tokens, session IDs, or passwords.\n"
+          },
+          {
+            "line": 45,
+            "rule": "rules.java-insecure-random",
+            "severity": "WARNING",
+            "message": "java.util.Random and Math.random() are not cryptographically secure. Use java.security.SecureRandom for security-sensitive operations like generating tokens, session IDs, or passwords.\n"
+          },
+          {
+            "line": 56,
+            "rule": "rules.java-insecure-random",
+            "severity": "WARNING",
+            "message": "java.util.Random and Math.random() are not cryptographically secure. Use java.security.SecureRandom for security-sensitive operations like generating tokens, session IDs, or passwords.\n"
+          }
+        ],
+        "primary_rule": "rules.java-insecure-random",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      },
+      {
+        "function": "invoke",
+        "start_line": 29,
+        "end_line": 64,
+        "language": "java",
+        "vuln_probability": 0.4331,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 39,
+            "rule": "rules.java-insecure-random",
+            "severity": "WARNING",
+            "message": "java.util.Random and Math.random() are not cryptographically secure. Use java.security.SecureRandom for security-sensitive operations like generating tokens, session IDs, or passwords.\n"
+          },
+          {
+            "line": 45,
+            "rule": "rules.java-insecure-random",
+            "severity": "WARNING",
+            "message": "java.util.Random and Math.random() are not cryptographically secure. Use java.security.SecureRandom for security-sensitive operations like generating tokens, session IDs, or passwords.\n"
+          },
+          {
+            "line": 56,
+            "rule": "rules.java-insecure-random",
+            "severity": "WARNING",
+            "message": "java.util.Random and Math.random() are not cryptographically secure. Use java.security.SecureRandom for security-sensitive operations like generating tokens, session IDs, or passwords.\n"
+          }
+        ],
+        "primary_rule": "rules.java-insecure-random",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\csrf\\CSRFLogin.java",
+    "language": "java",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\csrf\\ForgedReviews.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 1,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 34,
+        "end_line": 88,
+        "language": "java",
+        "vuln_probability": 0.5749,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 38,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\csrf\\Review.java",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\deserialization\\InsecureDeserialization.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\deserialization\\InsecureDeserializationTask.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\deserialization\\SerializationHelper.java",
+    "language": "java",
+    "total_chunks": 5,
+    "stage1_flagged": 2,
+    "stage2_flagged": 5,
+    "both_stages_confirmed": 2,
+    "model_only_confirmed": 0,
+    "total_confirmed": 2,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 18,
+        "end_line": 49,
+        "language": "java",
+        "vuln_probability": 0.5262,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 22,
+            "rule": "rules.java-insecure-deserialization",
+            "severity": "ERROR",
+            "message": "Insecure deserialization: ObjectInputStream.readObject() on untrusted data can lead to Remote Code Execution. Use a safe deserialization library or validate the input before deserializing.\n"
+          }
+        ],
+        "primary_rule": "rules.java-insecure-deserialization",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "fromString",
+        "start_line": 20,
+        "end_line": 26,
+        "language": "java",
+        "vuln_probability": 0.6497,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 22,
+            "rule": "rules.java-insecure-deserialization",
+            "severity": "ERROR",
+            "message": "Insecure deserialization: ObjectInputStream.readObject() on untrusted data can lead to Remote Code Execution. Use a safe deserialization library or validate the input before deserializing.\n"
+          }
+        ],
+        "primary_rule": "rules.java-insecure-deserialization",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\hijacksession\\HijackSession.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\hijacksession\\HijackSessionAssignment.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 2,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 2,
+    "model_only_confirmed": 0,
+    "total_confirmed": 2,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 33,
+        "end_line": 67,
+        "language": "java",
+        "vuln_probability": 0.4903,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 33,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 67,
+            "rule": "rules.java-insecure-cookie",
+            "severity": "WARNING",
+            "message": "Insecure cookie: ensure HttpOnly and Secure flags are set on all sensitive cookies. Missing HttpOnly allows JavaScript access; missing Secure allows transmission over HTTP.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "setCookie",
+        "start_line": 66,
+        "end_line": 71,
+        "language": "java",
+        "vuln_probability": 0.5153,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 67,
+            "rule": "rules.java-insecure-cookie",
+            "severity": "WARNING",
+            "message": "Insecure cookie: ensure HttpOnly and Secure flags are set on all sensitive cookies. Missing HttpOnly allows JavaScript access; missing Secure allows transmission over HTTP.\n"
+          }
+        ],
+        "primary_rule": "rules.java-insecure-cookie",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\hijacksession\\cas\\Authentication.java",
+    "language": "java",
+    "total_chunks": 4,
+    "stage1_flagged": 0,
+    "stage2_flagged": 4,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\hijacksession\\cas\\AuthenticationProvider.java",
+    "language": "java",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\hijacksession\\cas\\HijackSessionAuthenticationProvider.java",
+    "language": "java",
+    "total_chunks": 5,
+    "stage1_flagged": 1,
+    "stage2_flagged": 5,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 24,
+        "end_line": 57,
+        "language": "java",
+        "vuln_probability": 0.4327,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 25,
+            "rule": "rules.java-insecure-random",
+            "severity": "WARNING",
+            "message": "java.util.Random and Math.random() are not cryptographically secure. Use java.security.SecureRandom for security-sensitive operations like generating tokens, session IDs, or passwords.\n"
+          }
+        ],
+        "primary_rule": "rules.java-insecure-random",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\htmltampering\\HtmlTampering.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\htmltampering\\HtmlTamperingTask.java",
+    "language": "java",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\httpbasics\\HttpBasics.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\httpbasics\\HttpBasicsLesson.java",
+    "language": "java",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\httpbasics\\HttpBasicsQuiz.java",
+    "language": "java",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\httpproxies\\HttpBasicsInterceptRequest.java",
+    "language": "java",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\httpproxies\\HttpProxies.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\idor\\IDOR.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\idor\\IDORDiffAttributes.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\idor\\IDOREditOtherProfile.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\idor\\IDORLogin.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\idor\\IDORViewOtherProfile.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\idor\\IDORViewOwnProfile.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\idor\\IDORViewOwnProfileAltUrl.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\idor\\UserProfile.java",
+    "language": "java",
+    "total_chunks": 16,
+    "stage1_flagged": 2,
+    "stage2_flagged": 16,
+    "both_stages_confirmed": 2,
+    "model_only_confirmed": 0,
+    "total_confirmed": 2,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 58,
+        "end_line": 58,
+        "language": "java",
+        "vuln_probability": 0.6684,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 58,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "toHTMLString",
+        "start_line": 57,
+        "end_line": 73,
+        "language": "java",
+        "vuln_probability": 0.6825,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 58,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\insecurelogin\\InsecureLogin.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\insecurelogin\\InsecureLoginTask.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\jwt\\JWT.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\jwt\\JWTDecodeEndpoint.java",
+    "language": "java",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\jwt\\JWTQuiz.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\jwt\\JWTRefreshEndpoint.java",
+    "language": "java",
+    "total_chunks": 5,
+    "stage1_flagged": 1,
+    "stage2_flagged": 5,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 45,
+        "end_line": 93,
+        "language": "java",
+        "vuln_probability": 0.5583,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 45,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 46,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\jwt\\JWTSecretKeyEndpoint.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 1,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 34,
+        "end_line": 68,
+        "language": "java",
+        "vuln_probability": 0.397,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 38,
+            "rule": "rules.java-insecure-random",
+            "severity": "WARNING",
+            "message": "java.util.Random and Math.random() are not cryptographically secure. Use java.security.SecureRandom for security-sensitive operations like generating tokens, session IDs, or passwords.\n"
+          },
+          {
+            "line": 39,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\jwt\\JWTVotesEndpoint.java",
+    "language": "java",
+    "total_chunks": 6,
+    "stage1_flagged": 2,
+    "stage2_flagged": 6,
+    "both_stages_confirmed": 2,
+    "model_only_confirmed": 0,
+    "total_confirmed": 2,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 55,
+        "end_line": 189,
+        "language": "java",
+        "vuln_probability": 0.621,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 56,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 114,
+            "rule": "rules.java-insecure-cookie",
+            "severity": "WARNING",
+            "message": "Insecure cookie: ensure HttpOnly and Secure flags are set on all sensitive cookies. Missing HttpOnly allows JavaScript access; missing Secure allows transmission over HTTP.\n"
+          },
+          {
+            "line": 119,
+            "rule": "rules.java-insecure-cookie",
+            "severity": "WARNING",
+            "message": "Insecure cookie: ensure HttpOnly and Secure flags are set on all sensitive cookies. Missing HttpOnly allows JavaScript access; missing Secure allows transmission over HTTP.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "login",
+        "start_line": 104,
+        "end_line": 124,
+        "language": "java",
+        "vuln_probability": 0.4122,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 114,
+            "rule": "rules.java-insecure-cookie",
+            "severity": "WARNING",
+            "message": "Insecure cookie: ensure HttpOnly and Secure flags are set on all sensitive cookies. Missing HttpOnly allows JavaScript access; missing Secure allows transmission over HTTP.\n"
+          },
+          {
+            "line": 119,
+            "rule": "rules.java-insecure-cookie",
+            "severity": "WARNING",
+            "message": "Insecure cookie: ensure HttpOnly and Secure flags are set on all sensitive cookies. Missing HttpOnly allows JavaScript access; missing Secure allows transmission over HTTP.\n"
+          }
+        ],
+        "primary_rule": "rules.java-insecure-cookie",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\jwt\\claimmisuse\\JWTHeaderJKUEndpoint.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\jwt\\claimmisuse\\JWTHeaderKIDEndpoint.java",
+    "language": "java",
+    "total_chunks": 4,
+    "stage1_flagged": 0,
+    "stage2_flagged": 4,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\jwt\\votes\\Views.java",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\jwt\\votes\\Vote.java",
+    "language": "java",
+    "total_chunks": 4,
+    "stage1_flagged": 0,
+    "stage2_flagged": 4,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\lessontemplate\\LessonTemplate.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\lessontemplate\\SampleAttack.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 1,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 27,
+        "end_line": 27,
+        "language": "java",
+        "vuln_probability": 0.6498,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 27,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\logging\\LogBleedingTask.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\logging\\LogSpoofing.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\logging\\LogSpoofingTask.java",
+    "language": "java",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\missingac\\DisplayUser.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\missingac\\MissingAccessControlUserRepository.java",
+    "language": "java",
+    "total_chunks": 4,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\missingac\\MissingFunctionAC.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 1,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 14,
+        "end_line": 15,
+        "language": "java",
+        "vuln_probability": 0.6586,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 14,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 15,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\missingac\\MissingFunctionACHiddenMenus.java",
+    "language": "java",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\missingac\\MissingFunctionACUsers.java",
+    "language": "java",
+    "total_chunks": 5,
+    "stage1_flagged": 0,
+    "stage2_flagged": 4,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\missingac\\MissingFunctionACYourHash.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 1,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 39,
+        "end_line": 40,
+        "language": "java",
+        "vuln_probability": 0.7528,
+        "threshold_used": 0.3,
+        "detection_method": "model_only_high_confidence",
+        "static_findings": [],
+        "primary_rule": "model-detected",
+        "explanation": "",
+        "fix": "",
+        "severity": "HIGH",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\missingac\\MissingFunctionACYourHashAdmin.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\missingac\\User.java",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\openredirect\\OpenRedirect.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\openredirect\\OpenRedirectMitigationCheck.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 2,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 2,
+    "model_only_confirmed": 0,
+    "total_confirmed": 2,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 29,
+        "end_line": 58,
+        "language": "java",
+        "vuln_probability": 0.389,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 57,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "check",
+        "start_line": 33,
+        "end_line": 67,
+        "language": "java",
+        "vuln_probability": 0.4663,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 57,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\openredirect\\OpenRedirectQuiz.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\openredirect\\OpenRedirectRealRedirect.java",
+    "language": "java",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\openredirect\\OpenRedirectSecureController.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\openredirect\\OpenRedirectTask1.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\openredirect\\OpenRedirectTask2.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\openredirect\\OpenRedirectTask3.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\openredirect\\OpenRedirectTask4.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\passwordreset\\PasswordReset.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\passwordreset\\PasswordResetEmail.java",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\passwordreset\\QuestionsAssignment.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\passwordreset\\ResetLinkAssignment.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 1,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 43,
+        "end_line": 121,
+        "language": "java",
+        "vuln_probability": 0.4717,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 43,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 44,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 46,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 51,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\passwordreset\\ResetLinkAssignmentForgotPassword.java",
+    "language": "java",
+    "total_chunks": 5,
+    "stage1_flagged": 0,
+    "stage2_flagged": 5,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\passwordreset\\SecurityQuestionAssignment.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\passwordreset\\SimpleMailAssignment.java",
+    "language": "java",
+    "total_chunks": 5,
+    "stage1_flagged": 0,
+    "stage2_flagged": 5,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\passwordreset\\TriedQuestions.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\passwordreset\\resetlink\\PasswordChangeForm.java",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\pathtraversal\\PathTraversal.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\pathtraversal\\ProfileUpload.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\pathtraversal\\ProfileUploadBase.java",
+    "language": "java",
+    "total_chunks": 8,
+    "stage1_flagged": 0,
+    "stage2_flagged": 8,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\pathtraversal\\ProfileUploadFix.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\pathtraversal\\ProfileUploadRemoveUserInput.java",
+    "language": "java",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\pathtraversal\\ProfileUploadRetrieval.java",
+    "language": "java",
+    "total_chunks": 4,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\pathtraversal\\ProfileZipSlip.java",
+    "language": "java",
+    "total_chunks": 6,
+    "stage1_flagged": 0,
+    "stage2_flagged": 6,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\securepasswords\\SecurePasswords.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\securepasswords\\SecurePasswordsAssignment.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\securitymisconfiguration\\ActuatorExposureTask.java",
+    "language": "java",
+    "total_chunks": 4,
+    "stage1_flagged": 1,
+    "stage2_flagged": 4,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 28,
+        "end_line": 28,
+        "language": "java",
+        "vuln_probability": 0.4072,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 28,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\securitymisconfiguration\\ConfigHardeningTask.java",
+    "language": "java",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\securitymisconfiguration\\DefaultCredentialsTask.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 1,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 28,
+        "end_line": 29,
+        "language": "java",
+        "vuln_probability": 0.6626,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 28,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 29,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\securitymisconfiguration\\SecurityMisconfiguration.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\securitymisconfiguration\\VerboseErrorTask.java",
+    "language": "java",
+    "total_chunks": 4,
+    "stage1_flagged": 3,
+    "stage2_flagged": 4,
+    "both_stages_confirmed": 3,
+    "model_only_confirmed": 0,
+    "total_confirmed": 3,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 29,
+        "end_line": 52,
+        "language": "java",
+        "vuln_probability": 0.4786,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 29,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 33,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 52,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "triggerError",
+        "start_line": 32,
+        "end_line": 47,
+        "language": "java",
+        "vuln_probability": 0.6421,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 33,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "fetchConfig",
+        "start_line": 50,
+        "end_line": 61,
+        "language": "java",
+        "vuln_probability": 0.3912,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 52,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\spoofcookie\\SpoofCookie.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\spoofcookie\\SpoofCookieAssignment.java",
+    "language": "java",
+    "total_chunks": 5,
+    "stage1_flagged": 3,
+    "stage2_flagged": 5,
+    "both_stages_confirmed": 3,
+    "model_only_confirmed": 0,
+    "total_confirmed": 3,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 32,
+        "end_line": 74,
+        "language": "java",
+        "vuln_probability": 0.506,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 32,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 33,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 35,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 58,
+            "rule": "rules.java-insecure-cookie",
+            "severity": "WARNING",
+            "message": "Insecure cookie: ensure HttpOnly and Secure flags are set on all sensitive cookies. Missing HttpOnly allows JavaScript access; missing Secure allows transmission over HTTP.\n"
+          },
+          {
+            "line": 74,
+            "rule": "rules.java-insecure-cookie",
+            "severity": "WARNING",
+            "message": "Insecure cookie: ensure HttpOnly and Secure flags are set on all sensitive cookies. Missing HttpOnly allows JavaScript access; missing Secure allows transmission over HTTP.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "cleanup",
+        "start_line": 57,
+        "end_line": 61,
+        "language": "java",
+        "vuln_probability": 0.5588,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 58,
+            "rule": "rules.java-insecure-cookie",
+            "severity": "WARNING",
+            "message": "Insecure cookie: ensure HttpOnly and Secure flags are set on all sensitive cookies. Missing HttpOnly allows JavaScript access; missing Secure allows transmission over HTTP.\n"
+          }
+        ],
+        "primary_rule": "rules.java-insecure-cookie",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      },
+      {
+        "function": "credentialsLoginFlow",
+        "start_line": 63,
+        "end_line": 85,
+        "language": "java",
+        "vuln_probability": 0.4872,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 74,
+            "rule": "rules.java-insecure-cookie",
+            "severity": "WARNING",
+            "message": "Insecure cookie: ensure HttpOnly and Secure flags are set on all sensitive cookies. Missing HttpOnly allows JavaScript access; missing Secure allows transmission over HTTP.\n"
+          }
+        ],
+        "primary_rule": "rules.java-insecure-cookie",
+        "explanation": "",
+        "fix": "",
+        "severity": "WARNING",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\spoofcookie\\encoders\\EncDec.java",
+    "language": "java",
+    "total_chunks": 8,
+    "stage1_flagged": 0,
+    "stage2_flagged": 8,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\sqlinjection\\advanced\\SqlInjectionAdvanced.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\sqlinjection\\advanced\\SqlInjectionChallenge.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\sqlinjection\\advanced\\SqlInjectionChallengeLogin.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\sqlinjection\\advanced\\SqlInjectionLesson6a.java",
+    "language": "java",
+    "total_chunks": 7,
+    "stage1_flagged": 3,
+    "stage2_flagged": 7,
+    "both_stages_confirmed": 3,
+    "model_only_confirmed": 0,
+    "total_confirmed": 3,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 36,
+        "end_line": 95,
+        "language": "java",
+        "vuln_probability": 0.4268,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 36,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 51,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 95,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "injectableQuery",
+        "start_line": 50,
+        "end_line": 62,
+        "language": "java",
+        "vuln_probability": 0.4658,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 51,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "appendSuccededMessage",
+        "start_line": 94,
+        "end_line": 100,
+        "language": "java",
+        "vuln_probability": 0.502,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 95,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\sqlinjection\\advanced\\SqlInjectionLesson6b.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 2,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 2,
+    "model_only_confirmed": 0,
+    "total_confirmed": 2,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 42,
+        "end_line": 49,
+        "language": "java",
+        "vuln_probability": 0.7234,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 42,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 44,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "getPassword",
+        "start_line": 41,
+        "end_line": 63,
+        "language": "java",
+        "vuln_probability": 0.5835,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 42,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 44,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\sqlinjection\\advanced\\SqlInjectionQuiz.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\sqlinjection\\introduction\\SqlInjection.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\sqlinjection\\introduction\\SqlInjectionLesson10.java",
+    "language": "java",
+    "total_chunks": 4,
+    "stage1_flagged": 0,
+    "stage2_flagged": 4,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\sqlinjection\\introduction\\SqlInjectionLesson2.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\sqlinjection\\introduction\\SqlInjectionLesson3.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\sqlinjection\\introduction\\SqlInjectionLesson4.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 1,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 48,
+        "end_line": 49,
+        "language": "java",
+        "vuln_probability": 0.7588,
+        "threshold_used": 0.3,
+        "detection_method": "model_only_high_confidence",
+        "static_findings": [],
+        "primary_rule": "model-detected",
+        "explanation": "",
+        "fix": "",
+        "severity": "HIGH",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\sqlinjection\\introduction\\SqlInjectionLesson5.java",
+    "language": "java",
+    "total_chunks": 5,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\sqlinjection\\introduction\\SqlInjectionLesson5a.java",
+    "language": "java",
+    "total_chunks": 4,
+    "stage1_flagged": 2,
+    "stage2_flagged": 4,
+    "both_stages_confirmed": 2,
+    "model_only_confirmed": 0,
+    "total_confirmed": 2,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 24,
+        "end_line": 92,
+        "language": "java",
+        "vuln_probability": 0.5029,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 24,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 45,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "injectableQuery",
+        "start_line": 44,
+        "end_line": 86,
+        "language": "java",
+        "vuln_probability": 0.6124,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 45,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\sqlinjection\\introduction\\SqlInjectionLesson5b.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\sqlinjection\\introduction\\SqlInjectionLesson8.java",
+    "language": "java",
+    "total_chunks": 5,
+    "stage1_flagged": 0,
+    "stage2_flagged": 5,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\sqlinjection\\introduction\\SqlInjectionLesson9.java",
+    "language": "java",
+    "total_chunks": 8,
+    "stage1_flagged": 5,
+    "stage2_flagged": 8,
+    "both_stages_confirmed": 5,
+    "model_only_confirmed": 0,
+    "total_confirmed": 5,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 49,
+        "end_line": 116,
+        "language": "java",
+        "vuln_probability": 0.5264,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 100,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 105,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 110,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 115,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "getMaxSalary",
+        "start_line": 99,
+        "end_line": 102,
+        "language": "java",
+        "vuln_probability": 0.6166,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 100,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "getSumSalariesOfOtherEmployees",
+        "start_line": 104,
+        "end_line": 107,
+        "language": "java",
+        "vuln_probability": 0.5948,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 105,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "getJohnSalary",
+        "start_line": 109,
+        "end_line": 112,
+        "language": "java",
+        "vuln_probability": 0.6501,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 110,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "getEmployeesDataOrderBySalaryDesc",
+        "start_line": 114,
+        "end_line": 118,
+        "language": "java",
+        "vuln_probability": 0.5583,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 115,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\sqlinjection\\mitigation\\Servers.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\sqlinjection\\mitigation\\SqlInjectionLesson10a.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\sqlinjection\\mitigation\\SqlInjectionLesson10b.java",
+    "language": "java",
+    "total_chunks": 6,
+    "stage1_flagged": 2,
+    "stage2_flagged": 6,
+    "both_stages_confirmed": 2,
+    "model_only_confirmed": 0,
+    "total_confirmed": 2,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 50,
+        "end_line": 135,
+        "language": "java",
+        "vuln_probability": 0.6066,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 50,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 51,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 52,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 53,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 54,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 55,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 77,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      },
+      {
+        "function": "completed",
+        "start_line": 44,
+        "end_line": 88,
+        "language": "java",
+        "vuln_probability": 0.577,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 50,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 51,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 52,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 53,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 54,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 55,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 77,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\sqlinjection\\mitigation\\SqlInjectionLesson13.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\sqlinjection\\mitigation\\SqlInjectionMitigations.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\sqlinjection\\mitigation\\SqlOnlyInputValidation.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\sqlinjection\\mitigation\\SqlOnlyInputValidationOnKeywords.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\ssrf\\SSRF.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\ssrf\\SSRFTask1.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\ssrf\\SSRFTask2.java",
+    "language": "java",
+    "total_chunks": 4,
+    "stage1_flagged": 0,
+    "stage2_flagged": 4,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\vulnerablecomponents\\Contact.java",
+    "language": "java",
+    "total_chunks": 8,
+    "stage1_flagged": 0,
+    "stage2_flagged": 8,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\vulnerablecomponents\\ContactImpl.java",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\vulnerablecomponents\\VulnerableComponents.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\vulnerablecomponents\\VulnerableComponentsLesson.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\webgoatintroduction\\WebGoatIntroduction.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\webwolfintroduction\\Email.java",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\webwolfintroduction\\LandingAssignment.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\webwolfintroduction\\MailAssignment.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\webwolfintroduction\\WebWolfIntroduction.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\xss\\Comment.java",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\xss\\CrossSiteScripting.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\xss\\CrossSiteScriptingLesson1.java",
+    "language": "java",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\xss\\CrossSiteScriptingLesson5a.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\xss\\CrossSiteScriptingLesson6a.java",
+    "language": "java",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\xss\\CrossSiteScriptingQuiz.java",
+    "language": "java",
+    "total_chunks": 3,
+    "stage1_flagged": 0,
+    "stage2_flagged": 3,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\xss\\DOMCrossSiteScripting.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\xss\\DOMCrossSiteScriptingVerifier.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\xss\\mitigation\\CrossSiteScriptingLesson3.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\xss\\mitigation\\CrossSiteScriptingLesson4.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\xss\\mitigation\\CrossSiteScriptingMitigation.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\xss\\stored\\CrossSiteScriptingStored.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\xss\\stored\\StoredCrossSiteScriptingVerifier.java",
+    "language": "java",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\xss\\stored\\StoredXssComments.java",
+    "language": "java",
+    "total_chunks": 4,
+    "stage1_flagged": 1,
+    "stage2_flagged": 4,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 36,
+        "end_line": 94,
+        "language": "java",
+        "vuln_probability": 0.6089,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 40,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\xxe\\BlindSendFileAssignment.java",
+    "language": "java",
+    "total_chunks": 4,
+    "stage1_flagged": 0,
+    "stage2_flagged": 4,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\xxe\\Comment.java",
+    "language": "python",
+    "total_chunks": 0,
+    "stage1_flagged": 0,
+    "stage2_flagged": 0,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\xxe\\CommentsCache.java",
+    "language": "java",
+    "total_chunks": 7,
+    "stage1_flagged": 0,
+    "stage2_flagged": 7,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\xxe\\CommentsEndpoint.java",
+    "language": "java",
+    "total_chunks": 1,
+    "stage1_flagged": 0,
+    "stage2_flagged": 1,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\xxe\\ContentTypeAssignment.java",
+    "language": "java",
+    "total_chunks": 4,
+    "stage1_flagged": 0,
+    "stage2_flagged": 4,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\xxe\\Ping.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 1,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 30,
+        "end_line": 32,
+        "language": "java",
+        "vuln_probability": 0.7557,
+        "threshold_used": 0.3,
+        "detection_method": "model_only_high_confidence",
+        "static_findings": [],
+        "primary_rule": "model-detected",
+        "explanation": "",
+        "fix": "",
+        "severity": "HIGH",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\xxe\\SimpleXXE.java",
+    "language": "java",
+    "total_chunks": 4,
+    "stage1_flagged": 1,
+    "stage2_flagged": 4,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 37,
+        "end_line": 70,
+        "language": "java",
+        "vuln_probability": 0.4827,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 52,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\xxe\\User.java",
+    "language": "java",
+    "total_chunks": 5,
+    "stage1_flagged": 1,
+    "stage2_flagged": 5,
+    "both_stages_confirmed": 1,
+    "model_only_confirmed": 0,
+    "total_confirmed": 1,
+    "results": [
+      {
+        "function": "<class_fields>",
+        "start_line": 12,
+        "end_line": 13,
+        "language": "java",
+        "vuln_probability": 0.6698,
+        "threshold_used": 0.3,
+        "detection_method": "both_stages",
+        "static_findings": [
+          {
+            "line": 12,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          },
+          {
+            "line": 13,
+            "rule": "rules.java-hardcoded-credentials",
+            "severity": "ERROR",
+            "message": "Hardcoded credential detected. Never store passwords, secrets, tokens, or API keys as string literals in source code. Use environment variables or a secrets manager instead.\n"
+          }
+        ],
+        "primary_rule": "rules.java-hardcoded-credentials",
+        "explanation": "",
+        "fix": "",
+        "severity": "ERROR",
+        "severity_reason": ""
+      }
+    ]
+  },
+  {
+    "file": "../WebGoat/src/main/java/org/owasp/webgoat/lessons\\xxe\\XXE.java",
+    "language": "java",
+    "total_chunks": 2,
+    "stage1_flagged": 0,
+    "stage2_flagged": 2,
+    "both_stages_confirmed": 0,
+    "model_only_confirmed": 0,
+    "total_confirmed": 0,
+    "results": []
+  }
+]
