@@ -1,36 +1,59 @@
 # scanner/classifier.py
-# scanner/classifier.py
 import json
 import torch
 from pathlib import Path
+import os
+from dotenv import load_dotenv
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
+load_dotenv()
 
 
 class VulnerabilityClassifier:
     def __init__(self, model_path: str = 'model/checkpoints/final_v2'):
-        model_path = Path(model_path)
+        # Resolve model source:
+        # 1. Explicit argument passed in code
+        # 2. HF_MODEL_REPO env var (works locally + Streamlit Cloud)
+        # 3. Local path fallback for dev without .env
+        hf_repo = os.getenv("HF_MODEL_REPO", "Avneetx25/codebert-vulnerability-scanner")
 
-        # Load threshold from threshold.json saved during Week 3
-        threshold_file = model_path / 'threshold.json'
-        if threshold_file.exists():
-            with open(threshold_file, 'r') as f:
-                data = json.load(f)
-            self.threshold = data.get('threshold', 0.30)
+        if model_path is not None and Path(model_path).exists():
+            source = str(model_path)
+            print(f"[INFO] Loading classifier from local path: {source}")
         else:
-            print(f"[WARN] threshold.json not found at {threshold_file}, using default 0.30")
-            self.threshold = 0.30
+            source = hf_repo
+            print(f"[INFO] Loading classifier from HF Hub: {source}")
 
-        print(f"[INFO] Loading classifier from {model_path} (threshold={self.threshold})")
+        # Load threshold — check local path first, then download from Hub
+        threshold_loaded = False
+        if model_path is not None and (Path(model_path) / "threshold.json").exists():
+            with open(Path(model_path) / "threshold.json", "r") as f:
+                data = json.load(f)
+            self.threshold = data.get("threshold", 0.30)
+            threshold_loaded = True
 
-        self.tokenizer = AutoTokenizer.from_pretrained(str(model_path))
-        self.model = AutoModelForSequenceClassification.from_pretrained(str(model_path))
+        if not threshold_loaded:
+            try:
+                from huggingface_hub import hf_hub_download
+                threshold_file = hf_hub_download(repo_id=source, filename="threshold.json")
+                with open(threshold_file, "r") as f:
+                    data = json.load(f)
+                self.threshold = data.get("threshold", 0.30)
+                print(f"[INFO] Threshold loaded from Hub: {self.threshold}")
+            except Exception as e:
+                print(f"[WARN] Could not load threshold.json: {e}, using default 0.30")
+                self.threshold = 0.30
+
+        print(f"[INFO] Using threshold={self.threshold}")
+
+        self.tokenizer = AutoTokenizer.from_pretrained(source)
+        self.model = AutoModelForSequenceClassification.from_pretrained(source)
         self.model.eval()
 
-        # Use GPU if available
-        self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.model.to(self.device)
 
         print(f"[INFO] Classifier ready on {self.device}")
+    
 
     def classify(self, code: str) -> dict:
         """
