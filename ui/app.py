@@ -371,7 +371,7 @@ if scan_clicked and repo_url:
         except Exception as e:
             errors.append((filepath, str(e)))
         progress_bar.progress((i + 1) / len(files_to_scan))
-        shutil.rmtree(tmp_dir, ignore_errors=True)
+    shutil.rmtree(tmp_dir, ignore_errors=True)
 
     progress_bar.empty()
     status_text.empty()
