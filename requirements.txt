@@ -15,3 +15,4 @@ click>=8.4.0
 rich==15.0.0
 requests==2.34.2
 huggingface_hub==1.18.0
+semgrep==1.165.0
