@@ -246,7 +246,7 @@ for finding in results:
 
 | Component | Technology |
 |-----------|-----------|
-| Static analysis | Semgrep (custom rules) |
+| Static analysis | Semgrep (custom rules) + Bandit |
 | ML classifier | `microsoft/codebert-base` fine-tuned |
 | LLM fix suggester | Groq API |
 | Training | PyTorch + HuggingFace Transformers |
