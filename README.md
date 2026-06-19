@@ -266,7 +266,7 @@ for finding in results:
 
 ## Built by
 
-**Avneet** — [GitHub](#) · [LinkedIn](#)
+**Avneet** —  [LinkedIn](https://www.linkedin.com/in/avneetkaur025/)
 
 ---
 
