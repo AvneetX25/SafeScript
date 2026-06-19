@@ -1,5 +1,4 @@
 # scanner/pipeline.py
-
 import json
 from pathlib import Path
 from scanner.static_analysis import scan_file as static_scan
@@ -154,8 +153,8 @@ def run_pipeline(filepath: str, use_llm: bool = True) -> dict:
             'primary_rule': primary_finding['rule'],
             'explanation': llm_result.get('explanation', ''),
             'fix': llm_result.get('fix', ''),
-            'severity': llm_result.get('severity', primary_finding['severity']),
-            'severity_reason': llm_result.get('severity_reason', ''),
+            'severity': _normalize_severity(primary_finding['severity']),
+            'severity_reason': '',
         })
         
         
@@ -235,3 +234,16 @@ def save_report(pipeline_result: dict, output_path: str = 'evaluation/pipeline_r
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(pipeline_result, f, indent=2)
     print(f"[Report] Saved to {output_path}")
+    
+
+def _normalize_severity(severity: str) -> str:
+    """Normalize Semgrep (ERROR/WARNING) and Bandit (HIGH/MEDIUM/LOW) severity labels to HIGH/MEDIUM/LOW."""
+    mapping = {
+        'ERROR':   'HIGH',
+        'WARNING': 'MEDIUM',
+        'INFO':    'LOW',
+        'HIGH':    'HIGH',
+        'MEDIUM':  'MEDIUM',
+        'LOW':     'LOW',
+    }
+    return mapping.get(severity.upper(), 'MEDIUM')

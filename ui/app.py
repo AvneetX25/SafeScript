@@ -22,7 +22,7 @@ import subprocess
 
 # ── Page config ────────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="AI Security Scanner",
+    page_title="CodeSentinel",
     page_icon="🛡️",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -234,7 +234,7 @@ def rule_label(rule: str) -> str:
 # ── Sidebar ────────────────────────────────────────────────────────────────────
 
 with st.sidebar:
-    st.markdown("## 🛡️ AI Security Scanner")
+    st.markdown("## 🛡️ CodeSentinel")
     st.markdown(
         '<div style="color:#8b949e;font-size:0.82rem;margin-bottom:1.5rem;">'
         'Fine-tuned CodeBERT + static analysis + LLM-powered fixes'
@@ -278,10 +278,10 @@ st.markdown("""
     <span style="font-size:2rem;">🛡️</span>
     <div>
       <div style="font-size:1.75rem;font-weight:700;color:#e6edf3;letter-spacing:-0.02em;">
-        AI Security Scanner
+        CodeSentinel
       </div>
       <div style="color:#8b949e;font-size:0.875rem;margin-top:2px;">
-        Static Analysis · Fine-tuned CodeBERT · LLM-powered fixes
+        AI-Augmented Secure Code Analysis Platform
       </div>
     </div>
   </div>

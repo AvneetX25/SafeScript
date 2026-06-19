@@ -7,11 +7,17 @@ from dotenv import load_dotenv
 import streamlit as st
 
 load_dotenv()
-api_key = (
-    st.secrets.get("GROQ_API_KEY")
-    if hasattr(st, "secrets") and "GROQ_API_KEY" in st.secrets
-    else os.getenv("GROQ_API_KEY")
-)
+# Safe for both CLI and Streamlit
+def _get_api_key() -> str:
+    try:
+        if hasattr(st, "secrets") and "GROQ_API_KEY" in st.secrets:
+            return st.secrets["GROQ_API_KEY"]
+    except Exception:
+        pass
+    return os.getenv("GROQ_API_KEY")
+
+api_key = _get_api_key()
+
 
 client = Groq(api_key=api_key)
 
@@ -22,7 +28,6 @@ PROMPT_TEMPLATE = """You are a senior security engineer reviewing code for vulne
 The following {language} code has been flagged by static analysis.
 Rule triggered: {rule}
 Static analysis message: {message}
-Severity reported: {severity}
 
 Code:
 ```{language}
@@ -36,10 +41,6 @@ EXPLANATION:
 
 FIX:
 <the corrected code only, no commentary>
-
-SEVERITY: <LOW or MEDIUM or HIGH>
-
-REASON FOR SEVERITY: <one sentence>
 """
 
 
@@ -66,7 +67,6 @@ def explain_vulnerability(
         code=code,
         rule=rule,
         message=message,
-        severity=severity,
         language=language
     )
 
@@ -139,5 +139,40 @@ def _parse_llm_response(raw: str) -> dict:
     # Normalise severity — if LLM drifted, fall back to MEDIUM
     if result['severity'] not in ('LOW', 'MEDIUM', 'HIGH'):
         result['severity'] = 'MEDIUM'
+
+    return result
+def _parse_llm_response(raw: str) -> dict:
+    result = {
+        'explanation': '',
+        'fix': '',
+        'severity': '',
+        'severity_reason': '',
+        'raw': raw
+    }
+
+    sections = {
+        'EXPLANATION': '',
+        'FIX': '',
+    }
+
+    current_section = None
+    for line in raw.splitlines():
+        stripped = line.strip()
+
+        matched = False
+        for key in sections:
+            if stripped.startswith(f"{key}:"):
+                current_section = key
+                inline = stripped[len(key)+1:].strip()
+                if inline:
+                    sections[key] += inline + '\n'
+                matched = True
+                break
+
+        if not matched and current_section:
+            sections[current_section] += line + '\n'
+
+    result['explanation'] = sections['EXPLANATION'].strip()
+    result['fix'] = sections['FIX'].strip()
 
     return result
