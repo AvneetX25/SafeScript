@@ -4,7 +4,7 @@
 
 Static analysis + fine-tuned CodeBERT + LLM fix suggestions, chained in a three-stage pipeline that catches what single tools miss.
 
-🔗 **[Try the live scanner →](https://safescript.streamlit.app/)**
+🔗 **[Try the live scanner →]((https://safescript-three.vercel.app/))**
 
 ---
 
